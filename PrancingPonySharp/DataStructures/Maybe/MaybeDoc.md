@@ -11,9 +11,16 @@ According to Tony Hoare himself, the null problem is not itself, but its impleme
 So encapsulate the string in maybe and the only way to use it now is to go through the match methods, which avoid the null reference.
 `Maybe<string> maybeName = null`
 If you try to use this you will be forced to uncap and therefore treat if it is null.
-`maybeName.Match(just: name => Console.WriteLine(name), nothing: () => Console.WriteLine("is null value"))`
+
+`maybeName.Match(
+  just: name => Console.WriteLine(name), 
+  nothing: () => Console.WriteLine("is null value"))`
+  
 or
-`Console.WriteLine(maybeName.Match<string>(just: name => name, nothing: () => "is null value");`
+
+`Console.WriteLine(maybeName.Match<string>(
+  just: name => name, 
+  nothing: () => "is null value");`
 
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
