@@ -16,4 +16,6 @@ or
 `Console.WriteLine(maybeName.Match<string>(just: name => name, nothing: () => "is null value");`
 
 # References 
-Null References: The Billion Dollar Mistake - Tony Hoare
+- Null References: The Billion Dollar Mistake - Tony Hoare
+- Option rust doc
+- Haskell Maybe doc
