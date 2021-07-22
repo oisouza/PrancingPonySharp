@@ -11,16 +11,13 @@ namespace PrancingPonySharp.DataStructures.Maybe
         public bool IsNull => !IsValue;
 
         public static implicit operator Maybe<T>(T value) =>
-            A(value);
+            new(value, value is not null);
 
         private Maybe(T value, bool isValue)
         {
             Value = value;
             IsValue = isValue;
         }
-
-        public static Maybe<TD> A<TD>(TD value) => 
-            new(value, value is not null);
 
         public TR Matches<TR>(Func<T, TR> a, Func<TR> or) =>
             IsValue ? a(Value) : or();
