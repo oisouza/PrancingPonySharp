@@ -1,7 +1,8 @@
 # About the implementation of maybe in this project
 * The implementation of maybe in this project aims to encapsulate values to prevent null references from happening.
 
-Example...
+* Example
+
 `string name = null` 
 if you try to use this as if it were a string, you'll have a null reference problem. And many developers tend to forget cases like that.
 * But how to solve this? 
