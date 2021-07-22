@@ -1,5 +1,6 @@
 # About the implementation of maybe in this project
 * The implementation of maybe in this project aims to encapsulate values to prevent null references from happening.
+
 Example...
 `string name = null` 
 if you try to use this as if it were a string, you'll have a null reference problem. And many developers tend to forget cases like that.
@@ -12,5 +13,6 @@ If you try to use this you will be forced to uncap and therefore treat if it is 
 `maybeName.Match(just: name => Console.WriteLine(name), nothing: () => Console.WriteLine("is null value"))`
 or
 `Console.WriteLine(maybeName.Match<string>(just: name => name, nothing: () => "is null value");`
+
 # References 
 Null References: The Billion Dollar Mistake - Tony Hoare
