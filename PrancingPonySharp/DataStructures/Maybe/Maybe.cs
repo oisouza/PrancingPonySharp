@@ -6,17 +6,15 @@ namespace PrancingPonySharp.DataStructures.Maybe
     {
         private T Value { get; }
 
-        public bool IsValue { get; }
-
-        public bool IsNothing => !IsValue;
+        private bool IsValue { get; }
 
         public static implicit operator Maybe<T>(T value) =>
             A(value);
 
-        private Maybe(T value, bool isJust)
+        private Maybe(T value, bool isValue)
         {
             Value = value;
-            IsValue = isJust;
+            IsValue = isValue;
         }
 
         public static Maybe<TD> A<TD>(TD value) => 
