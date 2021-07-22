@@ -6,31 +6,31 @@ namespace PrancingPonySharp.DataStructures.Maybe
     {
         private T Value { get; }
 
-        public bool IsJust { get; }
+        public bool IsValue { get; }
 
-        public bool IsNothing => !IsJust;
+        public bool IsNothing => !IsValue;
 
         public static implicit operator Maybe<T>(T value) =>
-            Just(value);
+            A(value);
 
         private Maybe(T value, bool isJust)
         {
             Value = value;
-            IsJust = isJust;
+            IsValue = isJust;
         }
 
-        public static Maybe<TD> Just<TD>(TD value) => 
+        public static Maybe<TD> A<TD>(TD value) => 
             new(value, value is not null);
 
-        public TR Match<TR>(Func<T, TR> just, Func<TR> nothing) => 
-            IsJust ? just(Value) : nothing();
+        public TR Matches<TR>(Func<T, TR> a, Func<TR> or) =>
+            IsValue ? a(Value) : or();
 
-        public void Match(Action<T> just, Action nothing)
+        public void Matches(Action<T> a, Action or)
         {
-            if (IsJust)
-                just(Value);
+            if (IsValue)
+                a(Value);
             else
-                nothing();
+                or();
         }
     }
 }
