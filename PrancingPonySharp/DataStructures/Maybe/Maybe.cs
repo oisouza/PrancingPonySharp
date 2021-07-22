@@ -16,7 +16,7 @@ namespace PrancingPonySharp.DataStructures.Maybe
         private Maybe(T value, bool isValue)
         {
             Value = value;
-            this.IsValue = isValue;
+            IsValue = isValue;
         }
 
         public static Maybe<TD> A<TD>(TD value) => 
