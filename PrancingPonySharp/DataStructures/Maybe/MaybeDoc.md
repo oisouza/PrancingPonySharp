@@ -1,5 +1,5 @@
 # About the implementation of maybe in this project
-* The implementation of maybe in this project aims to encapsulate values to prevent null references from happening.
+The implementation of maybe in this project aims to encapsulate values to prevent null references from happening.
 
 * Example
 
