@@ -30,7 +30,7 @@ Console.WriteLine(ifName.Matches<string>(
   or: () => "is null value");
 ```
 
-# Methods
+# Public methods
 ### Matches
 
 Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
