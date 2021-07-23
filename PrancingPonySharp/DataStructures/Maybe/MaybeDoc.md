@@ -35,6 +35,6 @@ Console.WriteLine(ifName.Matches<string>(
   
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
-- Option rust doc
-- Haskell Maybe doc
+- Option RustLang doc
+- Maybe Haskell doc
 - Optional Java doc
