@@ -26,6 +26,9 @@ Console.WriteLine(ifName.Matches<string>(
   a: name => name, 
   or: () => "is null value");
 ```
+
+# Methods
+* 
   
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
