@@ -31,7 +31,16 @@ Console.WriteLine(ifName.Matches<string>(
 ```
 
 # Methods
-* 
+* Matches
+
+Accepts two functions that return the type passed, one to handle if the value exists, the other if it is null.
+
+`TR Matches<TR>(Func<T, TR> a, Func<TR> or)`
+
+Or do the same, but with no return.
+
+
+
   
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
