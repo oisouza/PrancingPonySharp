@@ -1,4 +1,4 @@
-# About the implementation of maybe in this project
+# About the implementation of maybe in this project `struct Maybe<T>`
 The implementation of maybe in this project aims to encapsulate values to prevent null references from happening.
 
 * Example
