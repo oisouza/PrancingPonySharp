@@ -16,15 +16,15 @@ So encapsulate the string in maybe and the only way to use it now is to go throu
 If you try to use this you will be forced to uncap and therefore treat if it is null.
 
 ```
-maybeName.Match(
-  just: name => Console.WriteLine(name), 
-  nothing: () => Console.WriteLine("is null value"))
+maybeName.Matches(
+  a: name => Console.WriteLine(name), 
+  or: () => Console.WriteLine("is null value"))
 ```
 or
 ```
-Console.WriteLine(maybeName.Match<string>(
-  just: name => name, 
-  nothing: () => "is null value");
+Console.WriteLine(maybeName.Matches<string>(
+  a: name => name, 
+  or: () => "is null value");
 ```
   
 # References 
