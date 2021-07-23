@@ -31,3 +31,4 @@ Console.WriteLine(maybeName.Match<string>(
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option rust doc
 - Haskell Maybe doc
+- Optional Java doc
