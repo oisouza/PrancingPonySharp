@@ -30,7 +30,7 @@ Console.WriteLine(ifName.Matches<string>(
   or: () => "is null value");
 ```
 
-# Public methods
+# Methods of Maybe Struct
 ### Matches
 
 Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
@@ -41,7 +41,14 @@ Or do the same, but with no return.
 
 `void Matches(Action<T> a, Action or)`
 
-  
+ 
+# Related methods
+### Rewrap
+
+Rewrap an data and return a Maybe Struct.
+
+`static Maybe<T> Rewrap<T>(this T value)`
+
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
