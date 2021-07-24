@@ -45,7 +45,7 @@ Or do the same, but with no return.
 # Related methods
 ### Rewrap
 
-Rewrap an data and return a Maybe Struct.
+Rewrap an T data and return a Maybe Struct.
 
 `static Maybe<T> Rewrap<T>(this T value)`
 
