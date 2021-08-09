@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Description>Library with algorithms and data structures useful for clean project developers.</Description>
+    <PackageProjectUrl>https://github.com/eduardosilva218/PrancingPonySharp</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
