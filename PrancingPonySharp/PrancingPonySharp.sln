@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp", "PrancingPonySharp.csproj", "{FD158C36-F433-4F95-9E40-65A6A957932C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp66", "PrancingPonySharp66.csproj", "{FD158C36-F433-4F95-9E40-65A6A957932C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.Test", "..\PrancingPonySharp.Test\PrancingPonySharp.Test.csproj", "{CBAAAE98-B728-415E-8545-5BA52B67C358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp66.Test", "..\PrancingPonySharp.Test\PrancingPonySharp66.Test.csproj", "{CBAAAE98-B728-415E-8545-5BA52B67C358}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

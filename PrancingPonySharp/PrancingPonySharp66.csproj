@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Description>Library with algorithms and data structures useful for clean project developers.</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageId>PrancingPonySharp66</PackageId>
+    <Authors>eduardosilva218</Authors>
+    <Product>PrancingPonySharp66</Product>
+    <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
+    <RepositoryType>public</RepositoryType>
+    <Version>1.0.1</Version>
+    <NeutralLanguage />
+  </PropertyGroup>
+
+</Project>
