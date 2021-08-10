@@ -25,7 +25,7 @@ ifName.Matches(
   a: name => Console.WriteLine(name), 
   or: () => Console.WriteLine("is null value"))
 ```
-or
+_or_
 ```
 Console.WriteLine(ifName.Matches<string>(
   a: name => name, 
@@ -49,7 +49,7 @@ ifName.Matches(
   a: name => Console.WriteLine(name), 
   or: () => Console.WriteLine("is null value"))
 ```
-or
+_or_
 ```
 Console.WriteLine(ifName.Matches<string>(
   a: name => name, 
@@ -86,6 +86,7 @@ catch(InvalidOperationException){
     ...
 }
 ```
+_or_
 ```
 try{
    Maybe<string> ifName = "Eduardo";
@@ -124,6 +125,7 @@ catch(InvalidOperationException){
     ...
 }
 ```
+_or_
 ```
 try{
    Maybe<string> ifName = "Eduardo";
@@ -151,6 +153,7 @@ catch(InvalidOperationException){
     ...
 }
 ```
+_or_
 ```
 try{
    Maybe<string> ifName = "Eduardo";
