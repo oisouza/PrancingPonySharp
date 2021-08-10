@@ -63,6 +63,7 @@ TryUnwrap tries to unwrap the value encapsuled or throw an Exception. By default
 Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of Maybe<T>.Value
 ```
 or its exception that was passed by parameter.
+
 `static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)`
 ```
 try{
