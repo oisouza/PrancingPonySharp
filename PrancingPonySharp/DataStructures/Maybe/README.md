@@ -135,6 +135,33 @@ catch(InvalidOperationException){
 }
 ```
 
+* ### ApplyFunctionOrDoNothing
+Apply a function to the value and if it is null it does nothing.
+
+`static void ApplyFunctionOrDoNothing<T>(this Maybe<T> ifValue, Action<T> function)`
+
+_Example_
+```
+try{
+   Maybe<string> ifName = null;
+   ifName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // does nothing, because ifName is null
+}
+catch(InvalidOperationException){
+    ...
+}
+```
+```
+try{
+   Maybe<string> ifName = "Eduardo";
+   ifName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // write in console "Eduardo"
+}
+catch(InvalidOperationException){
+    ...
+}
+```
+
 # References and inspirations
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
