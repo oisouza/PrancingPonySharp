@@ -64,6 +64,17 @@ Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of
 ```
 
 `static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)`
+```
+try{
+   Maybe<string> ifName = null;
+   ifName.TryUnwrap() // a InvalidOperationException is thrown if the value is null.
+   //or
+   ifName.TryUnwrap(TypeException)
+}
+catch(InvalidOperationException invalidOperationException){
+    ...
+}
+```
 
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
