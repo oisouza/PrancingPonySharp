@@ -55,6 +55,16 @@ string name = "Eduardo";
 Maybe<string> ifName = name.Wrap();
 ```
 
+### TryUnwrap
+
+TryUnwrap tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException, with message 
+
+```
+Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of Maybe<T>.Value
+```
+
+`static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)`
+
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
