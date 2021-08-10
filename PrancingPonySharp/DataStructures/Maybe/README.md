@@ -109,6 +109,7 @@ var nameOrStringEmpty = ifName.UnwrapOr(defaultValue: string.Empty);
 
 * ### ApplyFunctionIfItHasValueOrThrowException
 Apply a function on the value and if it is null throws an exception.
+
 `static void ApplyFunctionIfItHasValueOrThrowException<T>(this Maybe<T> ifValue, Action<T> functionIfItHasValue,
             Exception exception = null`
 
