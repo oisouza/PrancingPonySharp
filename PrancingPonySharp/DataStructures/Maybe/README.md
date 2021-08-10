@@ -43,27 +43,69 @@ Or do the same, but with no return.
 
 `void Matches(Action<T> a, Action or)`
 
- 
+Example
+ ```
+ifName.Matches(
+  a: name => Console.WriteLine(name), 
+  or: () => Console.WriteLine("is null value"))
+```
+or
+```
+Console.WriteLine(ifName.Matches<string>(
+  a: name => name, 
+  or: () => "is null value");
+```
+  
 # Related methods
-### Wrap
+* ### Wrap
 
 Wrap an T data and return a Maybe Struct.
 
 `static Maybe<T> Wrap<T>(this T value)`
+
+Example
 ```
 string name = "Eduardo";
 Maybe<string> ifName = name.Wrap();
 ```
 
-### TryUnwrap
+* ### UnwrapOrThrowException
 
-TryUnwrap tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException, with message 
+UnwrapOrThrowException tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException with the message.
+Or choose the exception for the error in the method parameter.
 
+`static T UnwrapOrThrowException<T>(this Maybe<T> ifValue, Exception exception = null)`
+
+Example
 ```
-Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of Maybe<T>.Value
+try{
+   Maybe<string> ifName = null;
+   var name = ifName.UnwrapOrThrowException() // throw exception, because ifName is null
+}
+catch(InvalidOperationException){
+    ...
+}
+```
+```
+try{
+   Maybe<string> ifName = "Eduardo";
+   var name = ifName.UnwrapOrThrowException() // return "Eduardo"
+}
+catch(InvalidOperationException){
+    ...
+}
 ```
 
-`static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)`
+* ### UnwrapOr
+Unwrap the encapsulated value or return the parameter value.
+
+`static T UnwrapOr<T>(this Maybe<T> ifValue, T or)`
+
+Example
+```
+Maybe<string> ifName = "Eduardo";
+var nameOrStringEmpty = ifName.UnwrapOr(string.Empty);
+```
 
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
