@@ -45,14 +45,14 @@ Or do the same, but with no return.
 
  
 # Related methods
-### Maybe
+### Wrap
 
-Maybe an T data and return a Maybe Struct.
+Wrap an T data and return a Maybe Struct.
 
-`static Maybe<T> Maybe<T>(this T value)`
+`static Maybe<T> Wrap<T>(this T value)`
 ```
 string name = "Eduardo";
-Maybe<string> ifName = name.Maybe();
+Maybe<string> ifName = name.Wrap();
 ```
 
 # References 
