@@ -1,4 +1,4 @@
-# PrancingPonySharp66 🦄 - .NET Framework 4.8
+# PrancingPonySharp66 🦄
  Library with algorithms and data structures useful for clean project developers.
  
  ### Data Structures
@@ -40,3 +40,5 @@ paket add PrancingPonySharp66 --version 1.0.2
 // Install PrancingPonySharp66 as a Cake Tool
 #tool nuget:?package=PrancingPonySharp66&version=1.0.2
 ```
+
+Maked in .NET Framework 4.8
