@@ -69,22 +69,22 @@ string name = "Eduardo";
 Maybe<string> ifName = name.Wrap();
 ```
 
-### TryUnwrap
+### UnwrapOrThrowException
 
-TryUnwrap tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException with the message 
+UnwrapOrThrowException tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException with the message 
 
 ```
 Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of Maybe<T>.Value
 ```
 or choose the exception for the error in the method parameter.
 
-`static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)`
+`static T UnwrapOrThrowException<T>(this Maybe<T> ifValue, Exception exception = null)`
 
 Example
 ```
 try{
    Maybe<string> ifName = null;
-   var name = ifName.TryUnwrap() // throw exception, because ifName is null
+   var name = ifName.UnwrapOrThrowException() // throw exception, because ifName is null
 }
 catch(InvalidOperationException){
     ...
@@ -93,7 +93,7 @@ catch(InvalidOperationException){
 ```
 try{
    Maybe<string> ifName = "Eduardo";
-   var name = ifName.TryUnwrap() // return "Eduardo"
+   var name = ifName.UnwrapOrThrowException() // return "Eduardo"
 }
 catch(InvalidOperationException){
     ...
