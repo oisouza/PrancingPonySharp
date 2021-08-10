@@ -30,7 +30,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
         }
 
         [Fact]
-        public void ShouldHaveChangedTheVariableSucessToFalseIfNullValue()
+        public void ShouldHaveChangedTheVariableSuccessToFalseIfNullValue()
         {
             Maybe<string> ifName = null;
 
@@ -44,7 +44,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
         }
 
         [Fact]
-        public void ShouldHaveChangedTheVariableSucessToTrueIfNotNullValue()
+        public void ShouldHaveChangedTheVariableSuccessToTrueIfNotNullValue()
         {
             Maybe<string> ifName = "eduardo";
 
