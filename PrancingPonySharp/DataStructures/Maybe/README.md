@@ -107,8 +107,8 @@ Unwrap the encapsulated value or return the parameter value.
 
 Example
 ```
-   Maybe<string> ifName = "Eduardo";
-   var nameOrStringEmpty = ifName.UnwrapOr(string.Empty);
+Maybe<string> ifName = "Eduardo";
+var nameOrStringEmpty = ifName.UnwrapOr(string.Empty);
 ```
 
 # References 
