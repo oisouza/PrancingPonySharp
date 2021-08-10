@@ -108,7 +108,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
 
             var condition = false;
 
-            ifValue.ApplyFunctionOrThrowException(_ => { condition = true; });
+            ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => { condition = true; });
 
             Assert.True(condition);
         }
@@ -118,7 +118,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
         {
             Maybe<string> ifValue = null;
 
-            Assert.Throws<InvalidOperationException>(() => ifValue.ApplyFunctionOrThrowException(_ => {}));
+            Assert.Throws<InvalidOperationException>(() => ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => {}));
         }
 
         [Fact]
@@ -126,7 +126,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
         {
             Maybe<string> ifValue = null;
 
-            Assert.Throws<Exception>(() => ifValue.ApplyFunctionOrThrowException(_ => {}, new Exception()));
+            Assert.Throws<Exception>(() => ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => {}, new Exception()));
         }
 
         [Fact]

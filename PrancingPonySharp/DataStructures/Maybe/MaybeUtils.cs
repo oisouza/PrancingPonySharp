@@ -12,7 +12,7 @@ namespace PrancingPonySharp.DataStructures.Maybe
         public static T UnwrapOrThrowException<T>(this Maybe<T> ifValue, Exception exception = null)
         {
             var value = ifValue.Matches(
-                value => value,
+                wrappedValue => wrappedValue,
                 () => throw (exception ?? new InvalidOperationException(
                     $"Maybe<T> is null. Try using Maybe<T>.{nameof(UnwrapOr)} to have no exceptions and put a value by default.")));
 
@@ -22,13 +22,13 @@ namespace PrancingPonySharp.DataStructures.Maybe
         public static T UnwrapOr<T>(this Maybe<T> ifValue, T defaultValue)
         {
             var value = ifValue.Matches(
-                value => value,
+                wrappedValue => wrappedValue,
                 () => defaultValue);
 
             return value;
         }
 
-        public static void ApplyFunctionOrThrowException<T>(this Maybe<T> ifValue, Action<T> functionIfItHasValue,
+        public static void ApplyFunctionIfItHasValueOrThrowException<T>(this Maybe<T> ifValue, Action<T> functionIfItHasValue,
             Exception exception = null)
         {
             ifValue.Matches(
