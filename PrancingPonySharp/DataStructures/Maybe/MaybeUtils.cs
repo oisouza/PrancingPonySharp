@@ -14,7 +14,7 @@ namespace PrancingPonySharp.DataStructures.Maybe
             return ifValue.Matches(
                 value => value,
                 () => throw (exception ?? new InvalidOperationException(
-                    "Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of Maybe<T>.Value")));
+                    $"Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.{nameof(UnwrapOr)} instead of Maybe<T>.Value")));
         }
 
         public static T UnwrapOr<T>(this Maybe<T> ifValue, T or)
@@ -32,7 +32,7 @@ namespace PrancingPonySharp.DataStructures.Maybe
                 {
                     if (exception == null)
                         throw new InvalidOperationException(
-                            "Apply a function on Value failed because value is null, try using Maybe<T>.Matches");
+                            $"Apply a function on Value failed because value is null, try using Maybe<T>.{nameof(Maybe<T>.Matches)}");
                     throw exception;
                 });
         }
