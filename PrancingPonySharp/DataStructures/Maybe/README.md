@@ -4,7 +4,7 @@ The implementation of maybe in this project aims to encapsulate values to preven
 
 `struct Maybe<T>`
 
-* Example
+_Example_
 
 ```string name = null``` 
 
@@ -43,7 +43,7 @@ Or do the same, but with no return.
 
 `void Matches(Action<T> a, Action or)`
 
-Example
+_Example_
  ```
 ifName.Matches(
   a: name => Console.WriteLine(name), 
@@ -63,7 +63,7 @@ Wrap an T data and return a Maybe Struct.
 
 `static Maybe<T> Wrap<T>(this T value)`
 
-Example
+_Example_
 ```
 string name = "Eduardo";
 Maybe<string> ifName = name.Wrap();
@@ -76,7 +76,7 @@ Or choose the exception for the error in the method parameter.
 
 `static T UnwrapOrThrowException<T>(this Maybe<T> ifValue, Exception exception = null)`
 
-Example
+_Example_
 ```
 try{
    Maybe<string> ifName = null;
@@ -101,7 +101,7 @@ Unwrap the encapsulated value or return the parameter value.
 
 `static T UnwrapOr<T>(this Maybe<T> ifValue, T defaultValue)`
 
-Example
+_Example_
 ```
 Maybe<string> ifName = "Eduardo";
 var nameOrStringEmpty = ifName.UnwrapOr(defaultValue: string.Empty);
@@ -113,7 +113,7 @@ Apply a function on the value and if it is null throws an exception.
 `static void ApplyFunctionIfItHasValueOrThrowException<T>(this Maybe<T> ifValue, Action<T> functionIfItHasValue,
             Exception exception = null`
 
-Example
+_Example_
 ```
 try{
    Maybe<string> ifName = null;
