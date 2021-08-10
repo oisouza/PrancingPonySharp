@@ -48,7 +48,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
 
             Maybe<string> ifValue = value;
 
-            Assert.Equal(value, ifValue.TryUnwrap());
+            Assert.Equal(value, ifValue.UnwrapOrThrowException());
         }
 
         [Fact]
@@ -58,7 +58,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
 
             Maybe<string> ifValue = value;
 
-            Assert.Throws<InvalidOperationException>(() => ifValue.TryUnwrap());
+            Assert.Throws<InvalidOperationException>(() => ifValue.UnwrapOrThrowException());
         }
 
         [Fact]
@@ -68,7 +68,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
 
             Maybe<string> ifValue = value;
 
-            Assert.Throws<Exception>(() => ifValue.TryUnwrap(new Exception()));
+            Assert.Throws<Exception>(() => ifValue.UnwrapOrThrowException(new Exception()));
         }
 
         [Fact]
@@ -78,7 +78,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
 
             Maybe<string> ifValue = value;
 
-            Assert.Throws<ArithmeticException>(() => ifValue.TryUnwrap(new ArithmeticException()));
+            Assert.Throws<ArithmeticException>(() => ifValue.UnwrapOrThrowException(new ArithmeticException()));
         }
 
         [Fact]
@@ -88,17 +88,17 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
 
             Maybe<string> ifValue = value;
 
-            Assert.Equal(value, ifValue.UnwrapOr("ignored"));
+            Assert.Equal(value, ifValue.UnwrapOr(defaultValue: "ignored"));
         }
 
         [Fact]
         public void ShouldReturnValueParameterAfterUnwrappingIfValueIsNull()
         {
-            const string valueExpected = "value of paramter";
+            const string valueExpected = "value of parameter";
 
             Maybe<string> ifValue = null;
 
-            Assert.Equal(valueExpected, ifValue.UnwrapOr(valueExpected));
+            Assert.Equal(valueExpected, ifValue.UnwrapOr(defaultValue: valueExpected));
         }
 
         [Fact]
@@ -108,7 +108,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
 
             var condition = false;
 
-            ifValue.TryApplyFunction(_ => { condition = true; });
+            ifValue.ApplyFunctionOrThrowException(_ => { condition = true; });
 
             Assert.True(condition);
         }
@@ -118,7 +118,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
         {
             Maybe<string> ifValue = null;
 
-            Assert.Throws<InvalidOperationException>(() => ifValue.TryApplyFunction(_ => { }));
+            Assert.Throws<InvalidOperationException>(() => ifValue.ApplyFunctionOrThrowException(_ => {}));
         }
 
         [Fact]
@@ -126,7 +126,7 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
         {
             Maybe<string> ifValue = null;
 
-            Assert.Throws<Exception>(() => ifValue.TryApplyFunction(_ => { }, new Exception()));
+            Assert.Throws<Exception>(() => ifValue.ApplyFunctionOrThrowException(_ => {}, new Exception()));
         }
 
         [Fact]

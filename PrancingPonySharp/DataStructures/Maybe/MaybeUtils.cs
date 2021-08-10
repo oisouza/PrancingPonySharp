@@ -9,30 +9,35 @@ namespace PrancingPonySharp.DataStructures.Maybe
             return value;
         }
 
-        public static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)
+        public static T UnwrapOrThrowException<T>(this Maybe<T> ifValue, Exception exception = null)
         {
-            return ifValue.Matches(
+            var value = ifValue.Matches(
                 value => value,
                 () => throw (exception ?? new InvalidOperationException(
-                    $"Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.{nameof(UnwrapOr)} instead of Maybe<T>.Value")));
+                    $"Maybe<T> is null. Try using Maybe<T>.{nameof(UnwrapOr)} to have no exceptions and put a value by default.")));
+
+            return value;
         }
 
-        public static T UnwrapOr<T>(this Maybe<T> ifValue, T or)
+        public static T UnwrapOr<T>(this Maybe<T> ifValue, T defaultValue)
         {
-            return ifValue.Matches(
+            var value = ifValue.Matches(
                 value => value,
-                () => or);
+                () => defaultValue);
+
+            return value;
         }
 
-        public static void TryApplyFunction<T>(this Maybe<T> ifValue, Action<T> function, Exception exception = null)
+        public static void ApplyFunctionOrThrowException<T>(this Maybe<T> ifValue, Action<T> functionIfItHasValue,
+            Exception exception = null)
         {
             ifValue.Matches(
-                function,
+                functionIfItHasValue,
                 () =>
                 {
                     if (exception == null)
                         throw new InvalidOperationException(
-                            $"Apply a function on Value failed because value is null, try using Maybe<T>.{nameof(Maybe<T>.Matches)}");
+                            $"Apply a functionIfItHasValue on Value failed because value is null. Try using {nameof(Maybe<T>.Matches)} to handle if null, or {nameof(ApplyFunctionOrDoNothing)} to do nothing if null.");
                     throw exception;
                 });
         }
