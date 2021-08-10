@@ -67,7 +67,7 @@ Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of
 ```
 try{
    Maybe<string> ifName = null;
-   ifName.TryUnwrap()
+   var name = ifName.TryUnwrap() // throw exception, because ifName is null
 }
 catch(InvalidOperationException invalidOperationException){
     ...
