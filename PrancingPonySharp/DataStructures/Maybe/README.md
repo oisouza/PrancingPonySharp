@@ -33,7 +33,7 @@ Console.WriteLine(ifName.Matches<string>(
 ```
 
 # Methods of Maybe Struct
-### Matches
+* ### Matches
 
 Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
 
