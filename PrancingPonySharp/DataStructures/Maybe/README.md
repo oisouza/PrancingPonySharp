@@ -50,6 +50,10 @@ Or do the same, but with no return.
 Maybe an T data and return a Maybe Struct.
 
 `static Maybe<T> Maybe<T>(this T value)`
+```
+string name = "Eduardo";
+Maybe<string> ifName = name.Maybe();
+```
 
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
