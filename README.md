@@ -9,37 +9,37 @@ You might want to clone this repository and use it however you like or copy the 
 
 * Packager Manager
 ```
-Install-Package PrancingPonySharp66 -Version 1.0.2
+Install-Package PrancingPonySharp66 -Version 1.4.3
 ```
 
 * .NET CLI
 ```
-dotnet add package PrancingPonySharp66 --version 1.0.2
+dotnet add package PrancingPonySharp66 --version 1.4.3
 ```
 
 * PackageReference
 ```
-<PackageReference Include="PrancingPonySharp66" Version="1.0.2" />
+<PackageReference Include="PrancingPonySharp66" Version="1.4.3" />
 ```
 
 * Paket CLI
 ```
-paket add PrancingPonySharp66 --version 1.0.2
+paket add PrancingPonySharp66 --version 1.4.3
 ```
 
 * Script & Interactive
 ```
-#r "nuget: PrancingPonySharp66, 1.0.2"
+#r "nuget: PrancingPonySharp66, 1.4.3"
 ```
 
 * Cake Addin
 ```
-#addin nuget:?package=PrancingPonySharp66&version=1.0.2
+#addin nuget:?package=PrancingPonySharp66&version=1.4.3
 ```
 
 * Cake Tool
 ```
-#tool nuget:?package=PrancingPonySharp66&version=1.0.2
+#tool nuget:?package=PrancingPonySharp66&version=1.4.3
 ```
 ![pony](PrancingPonySharp/Images/pony-icon.png)
 
