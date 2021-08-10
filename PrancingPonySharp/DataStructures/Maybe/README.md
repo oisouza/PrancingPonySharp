@@ -57,7 +57,7 @@ Console.WriteLine(ifName.Matches<string>(
 ```
   
 # Related methods
-### Wrap
+* ### Wrap
 
 Wrap an T data and return a Maybe Struct.
 
@@ -69,7 +69,7 @@ string name = "Eduardo";
 Maybe<string> ifName = name.Wrap();
 ```
 
-### UnwrapOrThrowException
+* ### UnwrapOrThrowException
 
 UnwrapOrThrowException tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException with the message.
 Or choose the exception for the error in the method parameter.
@@ -96,7 +96,7 @@ catch(InvalidOperationException){
 }
 ```
 
-### UnwrapOr
+* ### UnwrapOr
 Unwrap the encapsulated value or return the parameter value.
 
 `static T UnwrapOr<T>(this Maybe<T> ifValue, T or)`
