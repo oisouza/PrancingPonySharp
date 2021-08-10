@@ -57,26 +57,31 @@ Maybe<string> ifName = name.Wrap();
 
 ### TryUnwrap
 
-TryUnwrap tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException, with message 
+TryUnwrap tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException with message 
 
 ```
 Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of Maybe<T>.Value
 ```
-
+or its exception that was passed by parameter.
 `static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)`
 ```
 try{
    Maybe<string> ifName = null;
    var name = ifName.TryUnwrap() // throw exception, because ifName is null
 }
-catch(InvalidOperationException invalidOperationException){
+catch(InvalidOperationException){
     ...
 }
 ```
-`An InvalidOperationException is thrown by default if the value is null or.
- If it has value, returns the value.
- You can pass an exception if you don't want the default InvalidOperationException in the parameter.`
-
+```
+try{
+   Maybe<string> ifName = "Eduardo";
+   var name = ifName.TryUnwrap() // return "Eduardo"
+}
+catch(InvalidOperationException){
+    ...
+}
+```
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
