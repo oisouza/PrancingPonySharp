@@ -1,4 +1,4 @@
-# PrancingPonySharp66 🦄
+# PrancingPonySharp66 
  Library with algorithms and data structures useful for clean project developers.
  
  ### Data Structures
