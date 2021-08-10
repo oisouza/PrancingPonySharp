@@ -1,4 +1,4 @@
-# PrancingPonySharp 🦄
+# PrancingPonySharp66 🦄 - .NET Framework 4.8
  Library with algorithms and data structures useful for clean project developers.
  
  ### Data Structures
