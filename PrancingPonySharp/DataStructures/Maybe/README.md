@@ -107,6 +107,33 @@ Maybe<string> ifName = "Eduardo";
 var nameOrStringEmpty = ifName.UnwrapOr(defaultValue: string.Empty);
 ```
 
+* ### ApplyFunctionIfItHasValueOrThrowException
+Apply a function on the value and if it is null throws an exception.
+`static void ApplyFunctionIfItHasValueOrThrowException<T>(this Maybe<T> ifValue, Action<T> functionIfItHasValue,
+            Exception exception = null`
+
+Example
+```
+try{
+   Maybe<string> ifName = null;
+   ifName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // throw exception, because ifName is null
+}
+catch(InvalidOperationException){
+    ...
+}
+```
+```
+try{
+   Maybe<string> ifName = "Eduardo";
+   ifName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // write in console "Eduardo"
+}
+catch(InvalidOperationException){
+    ...
+}
+```
+
 # References and inspirations
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
