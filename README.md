@@ -32,14 +32,17 @@ paket add PrancingPonySharp66 --version 1.0.2
 #r "nuget: PrancingPonySharp66, 1.0.2"
 ```
 
-* Cake
+* Cake Addin
 ```
-// Install PrancingPonySharp66 as a Cake Addin
 #addin nuget:?package=PrancingPonySharp66&version=1.0.2
+```
 
-// Install PrancingPonySharp66 as a Cake Tool
+* Cake Tool
+```
 #tool nuget:?package=PrancingPonySharp66&version=1.0.2
 ```
+
+
 ### More about lib
 * Maked in .NET Framework 4.8
 * The name was inspired by the book I love the most, _The Lord of the Rings_, and 66 was a typo that was made too late to change since I had already put it in nuget, and 6/6 is coincidentally my birthday.      
