@@ -8,18 +8,18 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
     public class UnitTestMaybeUtils
     {
         [Fact]
-        public void ShouldRewrapAStringValuePassed()
+        public void ShouldWrapAStringValuePassed()
         {
             Maybe<string> expected = "eduardo";
 
             const string name = "eduardo";
 
-            var actual = name.Rewrap();
+            var actual = name.Maybe();
 
             Assert.Equal(expected, actual);
         }
 
-        public static IEnumerable<object[]> TestDataToSeeIfYouAreRewrappingAModelTest()
+        public static IEnumerable<object[]> TestDataToSeeIfYouAreWrappingAModelTest()
         {
             return new List<object[]>
             {
@@ -31,12 +31,12 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
         }
 
         [Theory]
-        [MemberData(nameof(TestDataToSeeIfYouAreRewrappingAModelTest))]
-        public static void ShouldRewrapATestModelPassed(TestModel testModel)
+        [MemberData(nameof(TestDataToSeeIfYouAreWrappingAModelTest))]
+        public static void ShouldWrapATestModelPassed(TestModel testModel)
         {
             Maybe<TestModel> expected = testModel;
 
-            var actual = testModel.Rewrap();
+            var actual = testModel.Maybe();
 
             Assert.Equal(expected, actual);
         }

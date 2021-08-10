@@ -43,14 +43,15 @@ Or do the same, but with no return.
 
  
 # Related methods
-### Rewrap
+### Maybe
 
-Rewrap an T data and return a Maybe Struct.
+Maybe an T data and return a Maybe Struct.
 
-`static Maybe<T> Rewrap<T>(this T value)`
+`static Maybe<T> Maybe<T>(this T value)`
 
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
 - Maybe Haskell doc
 - Optional Java doc
+- ElemarJR.FunctionalCSharp
