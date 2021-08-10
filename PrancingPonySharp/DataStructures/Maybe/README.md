@@ -43,13 +43,27 @@ Or do the same, but with no return.
 
 `void Matches(Action<T> a, Action or)`
 
- 
+Example
+ ```
+ifName.Matches(
+  a: name => Console.WriteLine(name), 
+  or: () => Console.WriteLine("is null value"))
+```
+or
+```
+Console.WriteLine(ifName.Matches<string>(
+  a: name => name, 
+  or: () => "is null value");
+```
+  
 # Related methods
 ### Wrap
 
 Wrap an T data and return a Maybe Struct.
 
 `static Maybe<T> Wrap<T>(this T value)`
+
+Example
 ```
 string name = "Eduardo";
 Maybe<string> ifName = name.Wrap();
@@ -65,6 +79,8 @@ Accessed Maybe<T>. Value when IsValue is false. Use Maybe<T>.UnwrapOr instead of
 or choose the exception for the error in the method parameter.
 
 `static T TryUnwrap<T>(this Maybe<T> ifValue, Exception exception = null)`
+
+Example
 ```
 try{
    Maybe<string> ifName = null;
@@ -83,6 +99,18 @@ catch(InvalidOperationException){
     ...
 }
 ```
+
+### UnwrapOr
+Unwrap the encapsulated value or return the parameter value.
+
+`static T UnwrapOr<T>(this Maybe<T> ifValue, T or)`
+
+Example
+```
+   Maybe<string> ifName = "Eduardo";
+   var nameOrStringEmpty = ifName.UnwrapOr(string.Empty);
+```
+
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
