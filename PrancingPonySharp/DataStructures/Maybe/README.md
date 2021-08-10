@@ -73,8 +73,9 @@ catch(InvalidOperationException invalidOperationException){
     ...
 }
 ```
-`A InvalidOperationException is thrown by default if the value is null. 
-   Or pass in parameter other type of Exception. If has value, then return value`
+`An InvalidOperationException is thrown by default if the value is null or.
+ If it has value, returns the value.
+ You can pass an exception if you don't want the default InvalidOperationException in the parameter.`
 
 # References 
 - Null References: The Billion Dollar Mistake - Tony Hoare
