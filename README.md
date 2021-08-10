@@ -41,4 +41,4 @@ paket add PrancingPonySharp66 --version 1.0.2
 #tool nuget:?package=PrancingPonySharp66&version=1.0.2
 ```
 
-Maked in .NET Framework 4.8
+_This is maked in .NET Framework 4.8_
