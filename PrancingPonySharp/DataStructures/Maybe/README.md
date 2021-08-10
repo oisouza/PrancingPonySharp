@@ -107,7 +107,7 @@ Maybe<string> ifName = "Eduardo";
 var nameOrStringEmpty = ifName.UnwrapOr(defaultValue: string.Empty);
 ```
 
-# References 
+# References and inspirations
 - Null References: The Billion Dollar Mistake - Tony Hoare
 - Option RustLang doc
 - Maybe Haskell doc
