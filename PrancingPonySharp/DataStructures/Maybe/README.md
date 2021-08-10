@@ -99,12 +99,12 @@ catch(InvalidOperationException){
 * ### UnwrapOr
 Unwrap the encapsulated value or return the parameter value.
 
-`static T UnwrapOr<T>(this Maybe<T> ifValue, T or)`
+`static T UnwrapOr<T>(this Maybe<T> ifValue, T defaultValue)`
 
 Example
 ```
 Maybe<string> ifName = "Eduardo";
-var nameOrStringEmpty = ifName.UnwrapOr(string.Empty);
+var nameOrStringEmpty = ifName.UnwrapOr(defaultValue: string.Empty);
 ```
 
 # References 
