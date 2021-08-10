@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Description>Library with algorithms and data structures useful for clean project developers.</Description>
     <PackageProjectUrl></PackageProjectUrl>
     <PackageId>PrancingPonySharp66</PackageId>
