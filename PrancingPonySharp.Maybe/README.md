@@ -1,6 +1,6 @@
 # About the implementation of maybe in this project 
 
-The implementation of [maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe). in this project aims to encapsulate values to prevent null references from happening.
+The implementation of [maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe) in this project aims to encapsulate values to prevent null references from happening.
 
 `struct Maybe<T>`
 
