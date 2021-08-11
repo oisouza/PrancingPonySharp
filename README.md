@@ -1,4 +1,4 @@
-# PrancingPonySharp66 
+# PrancingPonySharp
  Library with algorithms and data structures useful for clean project developers.
  
  ### Data Structures
@@ -9,37 +9,37 @@ You might want to clone this repository and use it however you like or copy the 
 
 * Packager Manager
 ```
-Install-Package PrancingPonySharp66 -Version 1.4.5
+Install-Package PrancingPonySharp -Version 1.0.0
 ```
 
 * .NET CLI
 ```
-dotnet add package PrancingPonySharp66 --version 1.4.5
+dotnet add package PrancingPonySharp --version 1.0.0
 ```
 
 * PackageReference
 ```
-<PackageReference Include="PrancingPonySharp66" Version="1.4.5" />
+<PackageReference Include="PrancingPonySharp" Version="1.0.0" />
 ```
 
 * Paket CLI
 ```
-paket add PrancingPonySharp66 --version 1.4.5
+paket add PrancingPonySharp66 --version 1.0.0
 ```
 
 * Script & Interactive
 ```
-#r "nuget: PrancingPonySharp66, 1.4.5"
+#r "nuget: PrancingPonySharp66, 1.0.0"
 ```
 
 * Cake Addin
 ```
-#addin nuget:?package=PrancingPonySharp66&version=1.4.5
+#addin nuget:?package=PrancingPonySharp66&version=1.0.0
 ```
 
 * Cake Tool
 ```
-#tool nuget:?package=PrancingPonySharp66&version=1.4.5
+#tool nuget:?package=PrancingPonySharp66&version=1.0.0
 ```
 ![pony](PrancingPonySharp/Images/pony-icon.png)
 
