@@ -98,7 +98,7 @@ catch(InvalidOperationException){
 ```
 
 * ### UnwrapOr
-Unwrap the encapsulated value or return the parameter value.
+UnwrapOr the encapsulated value or return the parameter value.
 
 `static T UnwrapOr<T>(this Maybe<T> ifValue, T defaultValue)`
 
