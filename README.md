@@ -2,7 +2,7 @@
  Library with algorithms and data structures useful for clean project developers.
  
  ### Data Structures
- * Do you want to end all null references in your project? [Maybe](PrancingPonySharp.Maybe/DataStructures/Maybe/README.md) we can help you.
+ * Do you want to end all null references in your project? [Maybe](PrancingPonySharp.Maybe/README.md) we can help you.
 
 ### To install
 The project is divided into several packages in nuget: 
