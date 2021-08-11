@@ -5,43 +5,10 @@
  * Do you want to end all null references in your project? [Maybe](PrancingPonySharp/DataStructures/Maybe/README.md) we can help you.
 
 ### To install
-You might want to clone this repository and use it however you like or copy the code right away, nothing stops you. But it is recommended to use one of the following ways by [nuget](https://www.nuget.org/packages/PrancingPonySharp66/).
+The project is divided into several packages in nuget: 
+* [Maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe/).
 
-* Packager Manager
-```
-Install-Package PrancingPonySharp -Version 1.0.0
-```
-
-* .NET CLI
-```
-dotnet add package PrancingPonySharp --version 1.0.0
-```
-
-* PackageReference
-```
-<PackageReference Include="PrancingPonySharp" Version="1.0.0" />
-```
-
-* Paket CLI
-```
-paket add PrancingPonySharp66 --version 1.0.0
-```
-
-* Script & Interactive
-```
-#r "nuget: PrancingPonySharp66, 1.0.0"
-```
-
-* Cake Addin
-```
-#addin nuget:?package=PrancingPonySharp66&version=1.0.0
-```
-
-* Cake Tool
-```
-#tool nuget:?package=PrancingPonySharp66&version=1.0.0
-```
-![pony](PrancingPonySharp/Images/pony-icon.png)
+![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
 ### More about lib
 * .NETFramework 4.5 | .NETStandard 2.1
