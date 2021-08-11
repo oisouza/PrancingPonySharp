@@ -8,7 +8,7 @@
 The project is divided into several packages: 
 * Maybe: [nuget](https://www.nuget.org/packages/PrancingPonySharp.Maybe/).
 
-![pony](PrancingPonySharp/Images/pony-icon.png)
+![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
 ### More about lib
 * .NETFramework 4.5 | .NETStandard 2.1
