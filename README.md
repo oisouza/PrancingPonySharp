@@ -16,4 +16,4 @@ The project is divided into several packages in nuget:
 * My inspiration is to fight big problems in the huge legacy monsters I program every day.     
 
 
-https://www.nuget.org/packages/PrancingPonySharp66/ is error, ignore this package. Because, unicorns hampered the poor pony's development 😠                                                                           
+[PrancingPonySharp66](https://www.nuget.org/packages/PrancingPonySharp66/) is a error, ignore this package. Because, unicorns hampered the poor pony's development and raised him. 😠                                                                           
