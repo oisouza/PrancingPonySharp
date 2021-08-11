@@ -21,11 +21,18 @@ namespace PrancingPonySharp.Maybe
             IsValue = isValue;
         }
 
+
+        /// <summary>
+        /// Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
+        /// </summary>
         public TR Matches<TR>(Func<T, TR> a, Func<TR> or)
         {
             return IsValue ? a(Value) : or();
         }
 
+        /// <summary>
+        /// Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
+        /// </summary>
         public void Matches(Action<T> a, Action or)
         {
             if (IsValue)
