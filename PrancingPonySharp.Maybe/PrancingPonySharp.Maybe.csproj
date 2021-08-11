@@ -4,9 +4,9 @@
     <TargetFrameworks>netstandard2.1;net45</TargetFrameworks>
     <Description>Library with algorithms and data structures useful for clean project developers.</Description>
     <PackageProjectUrl>https://github.com/eduardosilva218/PrancingPonySharp</PackageProjectUrl>
-    <PackageId>PrancingPonySharp</PackageId>
+    <PackageId>PrancingPonySharp.Maybe</PackageId>
     <Authors>eduardosilva218</Authors>
-    <Product>PrancingPonySharp</Product>
+    <Product>PrancingPonySharp.Maybe</Product>
     <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
     <RepositoryType>public</RepositoryType>
     <Version>1.0.0</Version>
