@@ -5,7 +5,7 @@
  * Do you want to end all null references in your project? [Maybe](PrancingPonySharp/DataStructures/Maybe/README.md) we can help you.
 
 ### To install
-The project is divided into several packages: 
+The project is divided into several packages in nuget: 
 * [Maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe/).
 
 ![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
