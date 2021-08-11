@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PrancingPonySharp.DataStructures.Maybe
+namespace PrancingPonySharp.Maybe
 {
     public static class MaybeUtils
     {

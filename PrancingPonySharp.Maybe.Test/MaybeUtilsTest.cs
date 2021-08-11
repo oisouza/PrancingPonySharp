@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using PrancingPonySharp.DataStructures.Maybe;
-using PrancingPonySharp.Test.DataStructures.Model;
 using Xunit;
 
-namespace PrancingPonySharp.Test.DataStructures.Maybe
+namespace PrancingPonySharp.Maybe.Test
 {
     public class MaybeUtilsTest
     {

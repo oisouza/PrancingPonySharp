@@ -1,7 +1,6 @@
-﻿using PrancingPonySharp.DataStructures.Maybe;
-using Xunit;
+﻿using Xunit;
 
-namespace PrancingPonySharp.Test.DataStructures.Maybe
+namespace PrancingPonySharp.Maybe.Test
 {
     public class MaybeStructTest
     {

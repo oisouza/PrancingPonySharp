@@ -1,4 +1,4 @@
-﻿namespace PrancingPonySharp.Test.DataStructures.Model
+﻿namespace PrancingPonySharp.Maybe.Test
 {
     public class ModelTest
     {
