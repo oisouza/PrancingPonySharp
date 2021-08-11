@@ -6,7 +6,7 @@ using Xunit;
 
 namespace PrancingPonySharp.Test.DataStructures.Maybe
 {
-    public class UnitTestMaybeUtils
+    public class MaybeUtilsTest
     {
         [Fact]
         public void ShouldWrapAStringValuePassed()
@@ -25,16 +25,16 @@ namespace PrancingPonySharp.Test.DataStructures.Maybe
             {
                 new object[]
                 {
-                    new TestModel {TestValue = 662001}
+                    new ModelTest {TestValue = 662001}
                 }
             };
         }
 
         [Theory]
         [MemberData(nameof(TestDataToSeeIfYouAreWrappingAModelTest))]
-        public static void ShouldWrapATestModelPassed(TestModel testModel)
+        public static void ShouldWrapATestModelPassed(ModelTest testModel)
         {
-            Maybe<TestModel> expected = testModel;
+            Maybe<ModelTest> expected = testModel;
 
             var actual = testModel.Wrap();
 

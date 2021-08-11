@@ -1,6 +1,6 @@
 ﻿namespace PrancingPonySharp.Test.DataStructures.Model
 {
-    public class TestModel
+    public class ModelTest
     {
         public int TestValue { get; set; }
     }

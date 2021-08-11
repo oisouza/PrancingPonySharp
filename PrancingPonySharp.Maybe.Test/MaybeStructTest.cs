@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PrancingPonySharp.Test.DataStructures.Maybe
 {
-    public class UnitTestMaybeStruct
+    public class MaybeStructTest
     {
         [Fact]
         public void MatchesShouldReturnAnErrorInStringIfNameIsNull()
