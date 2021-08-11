@@ -13,4 +13,7 @@ The project is divided into several packages in nuget:
 ### More about lib
 * .NETFramework 4.5 | .NETStandard 2.1
 * The name was inspired by the book I love the most, _The Lord of the Rings_.      
-* My inspiration is to fight big problems in the huge legacy monsters I program every day.                                                                                        
+* My inspiration is to fight big problems in the huge legacy monsters I program every day.     
+
+
+https://www.nuget.org/packages/PrancingPonySharp66/ is error, ignore this package. Because, unicorns hampered the poor pony's development 😠                                                                           
