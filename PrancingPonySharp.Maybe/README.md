@@ -1,6 +1,6 @@
 # About the implementation of maybe in this project 
 
-The implementation of maybe in this project aims to encapsulate values to prevent null references from happening.
+The implementation of [maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe) in this project aims to encapsulate values to prevent null references from happening.
 
 `struct Maybe<T>`
 
@@ -71,7 +71,7 @@ Maybe<string> ifName = name.Wrap();
 
 * ### UnwrapOrThrowException
 
-UnwrapOrThrowException tries to unwrap the value encapsuled or throw an Exception. By default the exception is an InvalidOperationException with the message.
+UnwrapOrThrowException tries to unwrap the value encapsulated or throw an Exception. By default the exception is an InvalidOperationException with the message.
 Or choose the exception for the error in the method parameter.
 
 `static T UnwrapOrThrowException<T>(this Maybe<T> ifValue, Exception exception = null)`
@@ -98,7 +98,7 @@ catch(InvalidOperationException){
 ```
 
 * ### UnwrapOr
-Unwrap the encapsulated value or return the parameter value.
+UnwrapOr the encapsulated value or return the parameter value.
 
 `static T UnwrapOr<T>(this Maybe<T> ifValue, T defaultValue)`
 

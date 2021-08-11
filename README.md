@@ -6,7 +6,7 @@
 
 ### To install
 The project is divided into several packages in nuget: 
-* [Maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe/1.0.0).
+* [Maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe).
 
 ![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
@@ -14,6 +14,3 @@ The project is divided into several packages in nuget:
 * .NETFramework 4.5 | .NETStandard 2.1
 * The name was inspired by the book I love the most, _The Lord of the Rings_.      
 * My inspiration is to fight big problems in the huge legacy monsters I program every day.     
-
-
-[PrancingPonySharp66](https://www.nuget.org/packages/PrancingPonySharp66/) is a error, ignore this package. Because, unicorns hampered the poor pony's development and raised him 😠                                                                           
