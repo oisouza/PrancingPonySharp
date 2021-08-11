@@ -6,7 +6,7 @@
 
 ### To install
 The project is divided into several packages: 
-* Maybe: [nuget](https://www.nuget.org/packages/PrancingPonySharp.Maybe/).
+* [Maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe/).
 
 ![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
