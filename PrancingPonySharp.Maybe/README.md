@@ -27,7 +27,7 @@ maybeName.Matches(
 ```
 _or_
 ```
-Console.WriteLine(maybeName.Matches<string>(
+Console.WriteLine(maybeName.Matches(
   a: name => name, 
   or: () => "is null value");
 ```
