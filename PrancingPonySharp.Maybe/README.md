@@ -66,7 +66,7 @@ Wrap an T data and return a Maybe Struct.
 _Example_
 ```
 string name = "Eduardo";
-Maybe<string> ifName = name.Wrap();
+Maybe<string> maybeName = name.Wrap();
 ```
 
 * ### UnwrapOrThrowException
@@ -79,8 +79,8 @@ Or choose the exception for the error in the method parameter.
 _Example_
 ```
 try{
-   Maybe<string> ifName = null;
-   var name = ifName.UnwrapOrThrowException() // throw exception, because ifName is null
+   Maybe<string> maybeName = null;
+   var name = maybeName.UnwrapOrThrowException() // throw exception, because maybeName is null
 }
 catch(InvalidOperationException){
     ...
@@ -89,8 +89,8 @@ catch(InvalidOperationException){
 _or_
 ```
 try{
-   Maybe<string> ifName = "Eduardo";
-   var name = ifName.UnwrapOrThrowException() // return "Eduardo"
+   Maybe<string> maybeName = "Eduardo";
+   var name = maybeName.UnwrapOrThrowException() // return "Eduardo", because maybeName is not null
 }
 catch(InvalidOperationException){
     ...
@@ -104,8 +104,8 @@ UnwrapOr the encapsulated value or return the parameter value.
 
 _Example_
 ```
-Maybe<string> ifName = "Eduardo";
-var nameOrStringEmpty = ifName.UnwrapOr(defaultValue: string.Empty);
+Maybe<string> maybeName = "Eduardo";
+var nameOrStringEmpty = maybeName.UnwrapOr(defaultValue: string.Empty);
 ```
 
 * ### ApplyFunctionIfItHasValueOrThrowException
@@ -117,9 +117,9 @@ Apply a function on the value and if it is null throws an exception.
 _Example_
 ```
 try{
-   Maybe<string> canName = null;
-   canName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // throw exception, because canName is null
+   Maybe<string> maybeName = null;
+   maybeName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // throw exception, because maybeName is null
 }
 catch(InvalidOperationException){
     ...
@@ -128,9 +128,9 @@ catch(InvalidOperationException){
 _or_
 ```
 try{
-   Maybe<string> canName = "Eduardo";
-   canName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // write in console "Eduardo", because canName is not null
+   Maybe<string> maybeName = "Eduardo";
+   maybeName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // write in console "Eduardo", because maybeName is not null
 }
 catch(InvalidOperationException){
     ...
@@ -145,9 +145,9 @@ Apply a function to the value and if it is null it does nothing.
 _Example_
 ```
 try{
-   Maybe<string> canName = null;
-   canName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // does nothing, because canName is null
+   Maybe<string> maybeName = null;
+   maybeName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // does nothing, because maybeName is null
 }
 catch(InvalidOperationException){
     ...
@@ -157,8 +157,8 @@ _or_
 ```
 try{
    Maybe<string> canName = "Eduardo";
-   canName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // did nothing, because canName is not null
+   maybeName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // did nothing, because maybeName is not null
 }
 catch(InvalidOperationException){
     ...
