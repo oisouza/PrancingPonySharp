@@ -117,9 +117,9 @@ Apply a function on the value and if it is null throws an exception.
 _Example_
 ```
 try{
-   Maybe<string> ifName = null;
-   ifName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // throw exception, because ifName is null
+   Maybe<string> canName = null;
+   canName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // throw exception, because canName is null
 }
 catch(InvalidOperationException){
     ...
@@ -128,9 +128,9 @@ catch(InvalidOperationException){
 _or_
 ```
 try{
-   Maybe<string> ifName = "Eduardo";
-   ifName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // write in console "Eduardo"
+   Maybe<string> canName = "Eduardo";
+   canName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // write in console "Eduardo", because canName is not null
 }
 catch(InvalidOperationException){
     ...
@@ -145,9 +145,9 @@ Apply a function to the value and if it is null it does nothing.
 _Example_
 ```
 try{
-   Maybe<string> ifName = null;
-   ifName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // does nothing, because ifName is null
+   Maybe<string> canName = null;
+   canName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // does nothing, because canName is null
 }
 catch(InvalidOperationException){
     ...
@@ -156,9 +156,9 @@ catch(InvalidOperationException){
 _or_
 ```
 try{
-   Maybe<string> ifName = "Eduardo";
-   ifName.ApplyFunctionIfItHasValueOrThrowException(
-    functionIfItHasValue: (name) => Console.Write(name)); // write in console "Eduardo"
+   Maybe<string> canName = "Eduardo";
+   canName.ApplyFunctionIfItHasValueOrThrowException(
+    functionIfItHasValue: (name) => Console.Write(name)); // did nothing, because canName is not null
 }
 catch(InvalidOperationException){
     ...
