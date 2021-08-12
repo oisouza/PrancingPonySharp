@@ -16,18 +16,18 @@ According to Tony Hoare himself, the null problem is not itself, but its impleme
 
 So encapsulate the string in maybe and the only way to use it now is to go through the match methods, which avoid the null reference.
 
-```Maybe<string> ifName = null```
+```Maybe<string> maybeName = null```
 
 If you try to use this you will be forced to uncap and therefore treat if it is null.
 
 ```
-ifName.Matches(
+maybeName.Matches(
   a: name => Console.WriteLine(name), 
   or: () => Console.WriteLine("is null value"))
 ```
 _or_
 ```
-Console.WriteLine(ifName.Matches<string>(
+Console.WriteLine(maybeName.Matches<string>(
   a: name => name, 
   or: () => "is null value");
 ```
@@ -45,13 +45,13 @@ Or do the same, but with no return.
 
 _Example_
  ```
-ifName.Matches(
+maybeName.Matches(
   a: name => Console.WriteLine(name), 
   or: () => Console.WriteLine("is null value"))
 ```
 _or_
 ```
-Console.WriteLine(ifName.Matches<string>(
+Console.WriteLine(maybeName.Matches<string>(
   a: name => name, 
   or: () => "is null value");
 ```
