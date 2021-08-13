@@ -5,7 +5,7 @@ namespace PrancingPonySharp.Maybe
     public static class MaybeUtils
     {
         /// <summary>
-        /// Wrap an T data and return a Maybe Struct.
+        ///     Wrap an T data and return a Maybe Struct.
         /// </summary>
         public static Maybe<T> Wrap<T>(this T value)
         {
@@ -13,7 +13,8 @@ namespace PrancingPonySharp.Maybe
         }
 
         /// <summary>
-        /// UnwrapOrThrowException tries to unwrap the value encapsulated or throw an Exception. By default the exception is an InvalidOperationException with the message. Or choose the exception for the error in the method parameter.
+        ///     UnwrapOrThrowException tries to unwrap the value encapsulated or throw an Exception. By default the exception is an
+        ///     InvalidOperationException with the message. Or choose the exception for the error in the method parameter.
         /// </summary>
         public static T UnwrapOrThrowException<T>(this Maybe<T> ifValue, Exception exception = null)
         {
@@ -26,7 +27,7 @@ namespace PrancingPonySharp.Maybe
         }
 
         /// <summary>
-        /// UnwrapOr the encapsulated value or return the parameter value.
+        ///     UnwrapOr the encapsulated value or return the parameter value.
         /// </summary>
         public static T UnwrapOr<T>(this Maybe<T> ifValue, T defaultValue)
         {
@@ -38,9 +39,10 @@ namespace PrancingPonySharp.Maybe
         }
 
         /// <summary>
-        /// Apply a function on the value and if it is null throws an exception.
+        ///     Apply a function on the value and if it is null throws an exception.
         /// </summary>
-        public static void ApplyFunctionIfItHasValueOrThrowException<T>(this Maybe<T> ifValue, Action<T> functionIfItHasValue,
+        public static void ApplyFunctionIfItHasValueOrThrowException<T>(this Maybe<T> ifValue,
+            Action<T> functionIfItHasValue,
             Exception exception = null)
         {
             ifValue.Matches(
@@ -55,7 +57,7 @@ namespace PrancingPonySharp.Maybe
         }
 
         /// <summary>
-        /// Apply a function to the value and if it is null it does nothing.
+        ///     Apply a function to the value and if it is null it does nothing.
         /// </summary>
         public static void ApplyFunctionOrDoNothing<T>(this Maybe<T> ifValue, Action<T> function)
         {

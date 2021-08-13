@@ -86,7 +86,7 @@ namespace PrancingPonySharp.Maybe.Test
 
             Maybe<string> ifValue = value;
 
-            Assert.Equal(value, ifValue.UnwrapOr(defaultValue: "ignored"));
+            Assert.Equal(value, ifValue.UnwrapOr("ignored"));
         }
 
         [Fact]
@@ -96,7 +96,7 @@ namespace PrancingPonySharp.Maybe.Test
 
             Maybe<string> ifValue = null;
 
-            Assert.Equal(valueExpected, ifValue.UnwrapOr(defaultValue: valueExpected));
+            Assert.Equal(valueExpected, ifValue.UnwrapOr(valueExpected));
         }
 
         [Fact]
@@ -116,7 +116,7 @@ namespace PrancingPonySharp.Maybe.Test
         {
             Maybe<string> ifValue = null;
 
-            Assert.Throws<InvalidOperationException>(() => ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => {}));
+            Assert.Throws<InvalidOperationException>(() => ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => { }));
         }
 
         [Fact]
@@ -124,7 +124,8 @@ namespace PrancingPonySharp.Maybe.Test
         {
             Maybe<string> ifValue = null;
 
-            Assert.Throws<Exception>(() => ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => {}, new Exception()));
+            Assert.Throws<Exception>(() =>
+                ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => { }, new Exception()));
         }
 
         [Fact]

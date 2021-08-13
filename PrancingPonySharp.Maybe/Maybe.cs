@@ -22,7 +22,7 @@ namespace PrancingPonySharp.Maybe
         }
 
         /// <summary>
-        /// Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
+        ///     Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
         /// </summary>
         public TR Matches<TR>(Func<T, TR> a, Func<TR> or)
         {
@@ -30,7 +30,7 @@ namespace PrancingPonySharp.Maybe
         }
 
         /// <summary>
-        /// Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
+        ///     Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
         /// </summary>
         public void Matches(Action<T> a, Action or)
         {

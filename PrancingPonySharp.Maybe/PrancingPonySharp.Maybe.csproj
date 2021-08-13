@@ -9,10 +9,10 @@
     <Product>PrancingPonySharp.Maybe</Product>
     <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
     <RepositoryType>public</RepositoryType>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <NeutralLanguage />
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <PackageIcon>pony-icon.png</PackageIcon>
     <PackageIconUrl />
   </PropertyGroup>
