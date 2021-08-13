@@ -10,6 +10,8 @@ The project is divided into several packages in nuget:
 
 ![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
+## Feel free to contribute if you want, the only thing I cherish is clean code.
+
 ### More about lib
 * .NETFramework 4.5 | .NETStandard 2.1
 * The name was inspired by the book I love the most, _The Lord of the Rings_.      
