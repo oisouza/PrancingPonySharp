@@ -6,7 +6,7 @@ namespace PrancingPonySharp.Result
     {
         private T Value { get; }
 
-        private Exception Exception { get; }
+        private TE Exception { get; }
 
         public bool IsValue { get; }
 
@@ -34,7 +34,7 @@ namespace PrancingPonySharp.Result
         /// <summary>
         ///     Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is exception.
         /// </summary>
-        public TR Matches<TR>(Func<T, TR> success, Func<Exception, TR> failure)
+        public TR Matches<TR>(Func<T, TR> success, Func<TE, TR> failure)
         {
             return IsValue ? success(Value) : failure(Exception);
         }
@@ -42,7 +42,7 @@ namespace PrancingPonySharp.Result
         /// <summary>
         ///     Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is exception.
         /// </summary>
-        public void Matches(Action<T> success, Action<Exception> failure)
+        public void Matches(Action<T> success, Action<TE> failure)
         {
             if (IsValue)
                 success(Value);
