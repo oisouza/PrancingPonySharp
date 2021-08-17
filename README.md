@@ -10,6 +10,7 @@ The project is divided into several packages in nuget:
 
 ![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
+<a href="https://www.nuget.org/packages?q=PrancingPonySharp"> <img src="https://img.shields.io/badge/NuGet-004880?style=for-the-badge&logo=nuget&logoColor=white" /> </a> 
 ## Feel free to contribute if you want, the only thing I cherish is clean code.
 
 ### More about lib
