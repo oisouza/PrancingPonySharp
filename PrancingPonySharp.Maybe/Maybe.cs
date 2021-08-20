@@ -30,7 +30,7 @@ namespace PrancingPonySharp.Maybe
         }
 
         /// <summary>
-        ///     Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is null.
+        ///     Accepts two delegates with no return, one to handle if the value exists and other if not.
         /// </summary>
         public void Matches(Action<T> a, Action or)
         {

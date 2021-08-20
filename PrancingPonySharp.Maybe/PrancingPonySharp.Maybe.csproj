@@ -1,27 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;net45</TargetFrameworks>
-    <Description>Do you want to end all null references in your project? Maybe we can help you.</Description>
-    <PackageProjectUrl>https://github.com/eduardosilva218/PrancingPonySharp</PackageProjectUrl>
-    <PackageId>PrancingPonySharp.Maybe</PackageId>
-    <Authors>eduardosilva218</Authors>
-    <Product>PrancingPonySharp.Maybe</Product>
-    <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
-    <RepositoryType>public</RepositoryType>
-    <Version>1.0.3</Version>
-    <NeutralLanguage />
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
-    <FileVersion>1.0.3.0</FileVersion>
-    <PackageIcon>pony-icon.png</PackageIcon>
-    <PackageIconUrl />
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;net45</TargetFrameworks>
+		<Description>Do you want to end all null references in your project? Maybe we can help you.</Description>
+		<PackageProjectUrl>https://github.com/eduardosilva218/PrancingPonySharp</PackageProjectUrl>
+		<PackageId>PrancingPonySharp.Maybe</PackageId>
+		<Authors>eduardosilva218</Authors>
+		<Product>PrancingPonySharp.Maybe</Product>
+		<RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
+		<RepositoryType>public</RepositoryType>
+		<Version>1.0.3</Version>
+		<NeutralLanguage />
+		<AssemblyVersion>1.0.3.0</AssemblyVersion>
+		<FileVersion>1.0.3.0</FileVersion>
+		<PackageIcon>pony-icon.png</PackageIcon>
+		<PackageIconUrl />
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="Images\pony-icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="Images\pony-icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>

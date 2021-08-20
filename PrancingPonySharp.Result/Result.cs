@@ -2,29 +2,29 @@
 
 namespace PrancingPonySharp.Result
 {
-    public readonly struct Result<T, TE> where TE : Exception
+    public readonly struct Result<T>
     {
         private T Value { get; }
 
-        private TE Exception { get; }
+        private Exception Exception { get; }
 
         public bool IsValue { get; }
 
         public bool IsException => !IsValue;
 
-        public static implicit operator Result<T, TE>(Func<T> functionToGetValue)
+        public static implicit operator Result<T>(Func<T> functionToGetValue)
         {
             try
             {
-                return new Result<T, TE>(functionToGetValue(), true, null);
+                return new Result<T>(functionToGetValue(), true, null);
             }
-            catch (TE exception)
+            catch (Exception exception)
             {
-                return new Result<T, TE>(default, false, exception);
+                return new Result<T>(default, false, exception);
             }
         }
 
-        public Result(T value, bool isValue, TE exception)
+        public Result(T value, bool isValue, Exception exception)
         {
             Value = value;
             IsValue = isValue;
@@ -32,17 +32,17 @@ namespace PrancingPonySharp.Result
         }
 
         /// <summary>
-        ///     Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is exception.
+        ///     Accepts two delegate that return the type passed, one to handle if the value exists, the other if it is exception.
         /// </summary>
-        public TR Matches<TR>(Func<T, TR> success, Func<TE, TR> failure)
+        public TR Matches<TR>(Func<T, TR> success, Func<Exception, TR> failure)
         {
             return IsValue ? success(Value) : failure(Exception);
         }
 
         /// <summary>
-        ///     Accepts two delegates that return the type passed, one to handle if the value exists, the other if it is exception.
+        ///     Accepts two delegate with no return, one to handle if the value exists and other if not.
         /// </summary>
-        public void Matches(Action<T> success, Action<TE> failure)
+        public void Matches(Action<T> success, Action<Exception> failure)
         {
             if (IsValue)
                 success(Value);
