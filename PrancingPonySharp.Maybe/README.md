@@ -146,7 +146,7 @@ _Example_
 ```
 try{
    Maybe<string> maybeName = null;
-   maybeName.ApplyFunctionIfItHasValueOrThrowException(
+   maybeName.ApplyFunctionOrDoNothing(
     functionIfItHasValue: (name) => Console.Write(name)); // does nothing, because maybeName is null
 }
 catch(InvalidOperationException){
@@ -157,7 +157,7 @@ _or_
 ```
 try{
    Maybe<string> canName = "Eduardo";
-   maybeName.ApplyFunctionIfItHasValueOrThrowException(
+   maybeName.ApplyFunctionOrDoNothing(
     functionIfItHasValue: (name) => Console.Write(name)); // did nothing, because maybeName is not null
 }
 catch(InvalidOperationException){
