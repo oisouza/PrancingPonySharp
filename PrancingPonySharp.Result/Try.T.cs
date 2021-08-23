@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace PrancingPonySharp.Result
+namespace PrancingPonySharp.Try
 {
-    public readonly struct Result<T>
+    public readonly struct Try<T>
     {
         private Func<T> Function { get; }
 
-        public Result(Func<T> function)
+        public Try(Func<T> function)
         {
             Function = function;
         }
@@ -14,7 +14,7 @@ namespace PrancingPonySharp.Result
         /// <summary>
         ///     Return T or identify if there is an exception returning T.
         /// </summary>
-        public T RunOrFailureHandle(Func<Exception, T> failure)
+        public T RunOrFailureHandle(Func<Exception, T> caseDefault)
         {
             try
             {
@@ -22,14 +22,14 @@ namespace PrancingPonySharp.Result
             }
             catch (Exception exception)
             {
-                return failure(exception);
+                return caseDefault(exception);
             }
         }
 
         /// <summary>
-        ///     Return T or identify if there is an exception.
+        ///     Try to run the method or handle the exception.
         /// </summary>
-        public void RunOrFailureHandle(Action<Exception> failure)
+        public void RunOrFailureHandle(Action<Exception> caseDefault)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace PrancingPonySharp.Result
             }
             catch (Exception exception)
             {
-                failure(exception);
+                caseDefault(exception);
             }
         }
     }

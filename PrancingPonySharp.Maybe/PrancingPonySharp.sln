@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Maybe", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Maybe.Test", "..\PrancingPonySharp.Maybe.Test\PrancingPonySharp.Maybe.Test.csproj", "{6D536133-150E-425F-B3AF-AB7CC17A53A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.Result", "..\PrancingPonySharp.Result\PrancingPonySharp.Result.csproj", "{6D0321A6-0D24-455A-8AAB-6A451F45CFF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Try", "..\PrancingPonySharp.Result\PrancingPonySharp.Try.csproj", "{6D0321A6-0D24-455A-8AAB-6A451F45CFF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
