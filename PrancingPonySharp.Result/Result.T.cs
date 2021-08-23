@@ -14,7 +14,7 @@ namespace PrancingPonySharp.Result
         /// <summary>
         ///     Return T or identify if there is an exception returning T.
         /// </summary>
-        public T RunOrFailureHandle(Func<Exception, T> failure)
+        public T RunOrFailureHandle(Func<Exception, T> faultHandler)
         {
             try
             {
@@ -22,14 +22,14 @@ namespace PrancingPonySharp.Result
             }
             catch (Exception exception)
             {
-                return failure(exception);
+                return faultHandler(exception);
             }
         }
 
         /// <summary>
         ///     Return T or identify if there is an exception.
         /// </summary>
-        public void RunOrFailureHandle(Action<Exception> failure)
+        public void RunOrFailureHandle(Action<Exception> faultHandler)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace PrancingPonySharp.Result
             }
             catch (Exception exception)
             {
-                failure(exception);
+                faultHandler(exception);
             }
         }
     }
