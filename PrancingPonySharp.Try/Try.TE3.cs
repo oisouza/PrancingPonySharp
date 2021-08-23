@@ -44,7 +44,7 @@ namespace PrancingPonySharp.Try
         /// <summary>
         ///     Try to run the method or handle the exception.
         /// </summary>
-        public void RunOrFailureHandle(Action<TE1> case1, Action<TE2> case2, Action<TE3> case3, Action<Exception> caseException)
+        public void RunOrFailureHandle(Action<TE1> case1, Action<TE2> case2, Action<TE3> case3, Action<Exception> caseDefault)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace PrancingPonySharp.Try
             }
             catch (Exception exception)
             {
-                caseException(exception);
+                caseDefault(exception);
             }
         }
     }
