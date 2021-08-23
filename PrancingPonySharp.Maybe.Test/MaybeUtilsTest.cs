@@ -11,9 +11,7 @@ namespace PrancingPonySharp.Maybe.Test
         {
             Maybe<string> expected = "eduardo";
             const string name = "eduardo";
-
             var actual = name.Wrap();
-
             Assert.Equal(expected, actual);
         }
 
@@ -33,9 +31,7 @@ namespace PrancingPonySharp.Maybe.Test
         public static void ShouldWrapATestModelPassed(ModelTest testModel)
         {
             Maybe<ModelTest> expected = testModel;
-
             var actual = testModel.Wrap();
-
             Assert.Equal(expected, actual);
         }
 
@@ -43,9 +39,7 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldUnwrapAStringValueOfMaybe()
         {
             const string value = "actual value";
-
             Maybe<string> ifValue = value;
-
             Assert.Equal(value, ifValue.UnwrapOrThrowException());
         }
 
@@ -53,9 +47,7 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldThrowAnInvalidOperationExceptionWhenTryingToUnwrapIfTheParameterExceptionIsNull()
         {
             const string value = null;
-
             Maybe<string> ifValue = value;
-
             Assert.Throws<InvalidOperationException>(() => ifValue.UnwrapOrThrowException());
         }
 
@@ -63,9 +55,7 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldThrowAnExceptionWhenTryingToUnwrapIfTheParameterExceptionIsException()
         {
             const string value = null;
-
             Maybe<string> ifValue = value;
-
             Assert.Throws<Exception>(() => ifValue.UnwrapOrThrowException(new Exception()));
         }
 
@@ -73,9 +63,7 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldThrowAnArithmeticExceptionWhenTryingToUnwrapIfTheParameterExceptionIsArithmeticException()
         {
             const string value = null;
-
             Maybe<string> ifValue = value;
-
             Assert.Throws<ArithmeticException>(() => ifValue.UnwrapOrThrowException(new ArithmeticException()));
         }
 
@@ -83,9 +71,7 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldReturnValueAfterUnwrappingAndIgnoreParameter()
         {
             const string value = "value";
-
             Maybe<string> ifValue = value;
-
             Assert.Equal(value, ifValue.UnwrapOr("ignored"));
         }
 
@@ -93,9 +79,7 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldReturnValueParameterAfterUnwrappingIfValueIsNull()
         {
             const string valueExpected = "value of parameter";
-
             Maybe<string> ifValue = null;
-
             Assert.Equal(valueExpected, ifValue.UnwrapOr(valueExpected));
         }
 
@@ -103,11 +87,8 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldApplyFunctionOfParameter()
         {
             Maybe<string> ifValue = "ignored";
-
             var condition = false;
-
             ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => { condition = true; });
-
             Assert.True(condition);
         }
 
@@ -115,7 +96,6 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldThrowAnInvalidOperationExceptionWhenTryingApplyFunctionIfTheParameterExceptionIsNull()
         {
             Maybe<string> ifValue = null;
-
             Assert.Throws<InvalidOperationException>(() => ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => { }));
         }
 
@@ -123,7 +103,6 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldThrowAnExceptionWhenTryingApplyFunctionIfTheParameterExceptionIsException()
         {
             Maybe<string> ifValue = null;
-
             Assert.Throws<Exception>(() =>
                 ifValue.ApplyFunctionIfItHasValueOrThrowException(_ => { }, new Exception()));
         }
@@ -133,9 +112,7 @@ namespace PrancingPonySharp.Maybe.Test
         {
             Maybe<string> ifValue = null;
             var condition = false;
-
             ifValue.ApplyFunctionOrDoNothing(_ => { condition = true; });
-
             Assert.False(condition);
         }
 
@@ -143,11 +120,8 @@ namespace PrancingPonySharp.Maybe.Test
         public void ShouldApplyToFunction()
         {
             Maybe<string> ifValue = "ignored";
-
             var condition = false;
-
             ifValue.ApplyFunctionOrDoNothing(_ => { condition = true; });
-
             Assert.True(condition);
         }
     }

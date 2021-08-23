@@ -22,7 +22,6 @@ namespace PrancingPonySharp.Maybe
                 wrappedValue => wrappedValue,
                 () => throw (exception ?? new InvalidOperationException(
                     $"Maybe<T> is null. Try using Maybe<T>.{nameof(UnwrapOr)} to have no exceptions and put a value by default.")));
-
             return value;
         }
 
@@ -34,7 +33,6 @@ namespace PrancingPonySharp.Maybe
             var value = ifValue.Matches(
                 wrappedValue => wrappedValue,
                 () => defaultValue);
-
             return value;
         }
 

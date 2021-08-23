@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PrancingPonySharp.Maybe\PrancingPonySharp.Maybe.csproj" />
+    <ProjectReference Include="..\PrancingPonySharp.Result\PrancingPonySharp.Result.csproj" />
   </ItemGroup>
 
 </Project>
