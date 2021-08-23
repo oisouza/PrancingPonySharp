@@ -18,7 +18,8 @@ namespace PrancingPonySharp.Try
         /// <summary>
         ///     Return T or identify if there is an exception returning T.
         /// </summary>
-        public T RunOrFailureHandle(Func<TE1, T> case1, Func<TE2, T> case2, Func<TE3, T> case3, Func<TE4, T> case4, Func<Exception, T> caseDefault)
+        public T RunOrFailureHandle(Func<TE1, T> case1, Func<TE2, T> case2, Func<TE3, T> case3, Func<TE4, T> case4,
+            Func<Exception, T> caseDefault)
         {
             try
             {
@@ -49,7 +50,8 @@ namespace PrancingPonySharp.Try
         /// <summary>
         ///     Try to run the method or handle the exception.
         /// </summary>
-        public void RunOrFailureHandle(Action<TE1> case1, Action<TE2> case2, Action<TE3> case3, Action<TE4> case4, Action<Exception> caseDefault)
+        public void RunOrFailureHandle(Action<TE1> case1, Action<TE2> case2, Action<TE3> case3, Action<TE4> case4,
+            Action<Exception> caseDefault)
         {
             try
             {

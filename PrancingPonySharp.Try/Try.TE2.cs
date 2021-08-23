@@ -2,8 +2,8 @@
 
 namespace PrancingPonySharp.Try
 {
-    public readonly struct Try<T, TE1, TE2> 
-        where TE1 : Exception 
+    public readonly struct Try<T, TE1, TE2>
+        where TE1 : Exception
         where TE2 : Exception
     {
         private Func<T> Function { get; }
