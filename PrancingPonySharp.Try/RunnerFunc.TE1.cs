@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace PrancingPonySharp.Try
+namespace PrancingPonySharp.Runner
 {
-    public readonly struct Try<T, TE1>
+    public readonly struct RunnerFunc<T, TE1>
         where TE1 : Exception
     {
         private Func<T> Function { get; }
 
-        public Try(Func<T> function)
+        public RunnerFunc(Func<T> function)
         {
             Function = function;
         }
@@ -15,7 +15,7 @@ namespace PrancingPonySharp.Try
         /// <summary>
         ///     Return T or identify if there is an exception returning T.
         /// </summary>
-        public T RunOrFailureHandle(Func<TE1, T> case1, Func<Exception, T> caseDefault)
+        public T RunOrFailure(Func<TE1, T> caseFailure1, Func<Exception, T> caseFailureDefault)
         {
             try
             {
@@ -23,18 +23,18 @@ namespace PrancingPonySharp.Try
             }
             catch (TE1 exception)
             {
-                return case1(exception);
+                return caseFailure1(exception);
             }
             catch (Exception exception)
             {
-                return caseDefault(exception);
+                return caseFailureDefault(exception);
             }
         }
 
         /// <summary>
-        ///     Try to run the method or handle the exception.
+        ///     RunnerAction to run the method or handle the exception.
         /// </summary>
-        public void RunOrFailureHandle(Action<TE1> case1, Action<Exception> caseDefault)
+        public void RunOrFailure(Action<TE1> caseFailure1, Action<Exception> caseFailureDefault)
         {
             try
             {
@@ -42,11 +42,11 @@ namespace PrancingPonySharp.Try
             }
             catch (TE1 exception)
             {
-                case1(exception);
+                caseFailure1(exception);
             }
             catch (Exception exception)
             {
-                caseDefault(exception);
+                caseFailureDefault(exception);
             }
         }
     }

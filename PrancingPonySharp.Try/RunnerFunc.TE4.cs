@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace PrancingPonySharp.Try
+namespace PrancingPonySharp.Runner
 {
-    public readonly struct Try<T, TE1, TE2, TE3, TE4>
+    public readonly struct RunnerFunc<T, TE1, TE2, TE3, TE4>
         where TE1 : Exception
         where TE2 : Exception
         where TE3 : Exception
@@ -10,7 +10,7 @@ namespace PrancingPonySharp.Try
     {
         private Func<T> Function { get; }
 
-        public Try(Func<T> function)
+        public RunnerFunc(Func<T> function)
         {
             Function = function;
         }
@@ -18,8 +18,9 @@ namespace PrancingPonySharp.Try
         /// <summary>
         ///     Return T or identify if there is an exception returning T.
         /// </summary>
-        public T RunOrFailureHandle(Func<TE1, T> case1, Func<TE2, T> case2, Func<TE3, T> case3, Func<TE4, T> case4,
-            Func<Exception, T> caseDefault)
+        public T RunOrFailure(Func<TE1, T> caseFailure1, Func<TE2, T> caseFailure2, Func<TE3, T> caseFailure3,
+            Func<TE4, T> caseFailure4,
+            Func<Exception, T> caseFailureDefault)
         {
             try
             {
@@ -27,31 +28,32 @@ namespace PrancingPonySharp.Try
             }
             catch (TE1 exception)
             {
-                return case1(exception);
+                return caseFailure1(exception);
             }
             catch (TE2 exception)
             {
-                return case2(exception);
+                return caseFailure2(exception);
             }
             catch (TE3 exception)
             {
-                return case3(exception);
+                return caseFailure3(exception);
             }
             catch (TE4 exception)
             {
-                return case4(exception);
+                return caseFailure4(exception);
             }
             catch (Exception exception)
             {
-                return caseDefault(exception);
+                return caseFailureDefault(exception);
             }
         }
 
         /// <summary>
-        ///     Try to run the method or handle the exception.
+        ///     RunnerAction to run the method or handle the exception.
         /// </summary>
-        public void RunOrFailureHandle(Action<TE1> case1, Action<TE2> case2, Action<TE3> case3, Action<TE4> case4,
-            Action<Exception> caseDefault)
+        public void RunOrFailure(Action<TE1> caseFailure1, Action<TE2> caseFailure2, Action<TE3> caseFailure3,
+            Action<TE4> caseFailure4,
+            Action<Exception> caseFailureDefault)
         {
             try
             {
@@ -59,23 +61,23 @@ namespace PrancingPonySharp.Try
             }
             catch (TE1 exception)
             {
-                case1(exception);
+                caseFailure1(exception);
             }
             catch (TE2 exception)
             {
-                case2(exception);
+                caseFailure2(exception);
             }
             catch (TE3 exception)
             {
-                case3(exception);
+                caseFailure3(exception);
             }
             catch (TE4 exception)
             {
-                case4(exception);
+                caseFailure4(exception);
             }
             catch (Exception exception)
             {
-                caseDefault(exception);
+                caseFailureDefault(exception);
             }
         }
     }

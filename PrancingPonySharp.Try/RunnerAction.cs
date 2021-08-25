@@ -1,20 +1,20 @@
 ﻿using System;
 
-namespace PrancingPonySharp.Try
+namespace PrancingPonySharp.Runner
 {
-    public readonly struct Try
+    public readonly struct RunnerAction
     {
         private Action Function { get; }
 
-        public Try(Action function)
+        public RunnerAction(Action function)
         {
             Function = function;
         }
 
         /// <summary>
-        ///     Try to run the method or handle the exception.
+        ///     RunnerAction to run the method or handle the exception.
         /// </summary>
-        public void RunOrFailureHandle(Action<Exception> caseDefault)
+        public void RunOrFailure(Action<Exception> caseFailureDefault)
         {
             try
             {
@@ -22,7 +22,7 @@ namespace PrancingPonySharp.Try
             }
             catch (Exception exception)
             {
-                caseDefault(exception);
+                caseFailureDefault(exception);
             }
         }
     }
