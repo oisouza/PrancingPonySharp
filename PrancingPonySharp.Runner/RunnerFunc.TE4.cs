@@ -49,7 +49,7 @@ namespace PrancingPonySharp.Runner
         }
 
         /// <summary>
-        ///     RunnerAction to run the method or handle the exception.
+        ///     Try to run the method or handle the exception.
         /// </summary>
         public void RunOrFailure(Action<TE1> caseFailure1, Action<TE2> caseFailure2, Action<TE3> caseFailure3,
             Action<TE4> caseFailure4,
