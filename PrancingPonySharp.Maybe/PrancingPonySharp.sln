@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Maybe.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.Runner", "..\PrancingPonySharp.Runner\PrancingPonySharp.Runner.csproj", "{BA5EB8C0-D7A1-4790-B4BC-F4BE5DA918BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.Runner.Test", "..\PrancingPonySharp.Runner.Test\PrancingPonySharp.Runner.Test.csproj", "{DFBBE78D-D2FB-46E7-855E-7FC76749E2D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BA5EB8C0-D7A1-4790-B4BC-F4BE5DA918BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA5EB8C0-D7A1-4790-B4BC-F4BE5DA918BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA5EB8C0-D7A1-4790-B4BC-F4BE5DA918BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBBE78D-D2FB-46E7-855E-7FC76749E2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBBE78D-D2FB-46E7-855E-7FC76749E2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBBE78D-D2FB-46E7-855E-7FC76749E2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBBE78D-D2FB-46E7-855E-7FC76749E2D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
