@@ -2,6 +2,20 @@
 
   <PropertyGroup>
 	  <TargetFrameworks>netstandard2.1;net45</TargetFrameworks>
+	  <PackageReleaseNotes />
+	  <PackageProjectUrl>https://github.com/eduardosilva218/PrancingPonySharp</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
+	  <PackageIcon>pony-icon.png</PackageIcon>
+	  <PackageIconUrl />
+	  <RepositoryType>public</RepositoryType>
+	  <Description>Don't trust the programmer to treat exceptions, force it.</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Images\pony-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
