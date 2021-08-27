@@ -3,6 +3,7 @@
  
  ### Data Structures
  * Do you want to end all null references in your project? [Maybe](PrancingPonySharp.Maybe/README.md) we can help you.
+ * Don't trust the programmer [ToTreat](PrancingPonySharp.ToTreat/README.md) exceptions, force it.
 
 ### To install
 The project is divided into several packages in nuget: 
