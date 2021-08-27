@@ -1,15 +1,16 @@
 ﻿using System;
 
-namespace PrancingPonySharp.Runner
+namespace PrancingPonySharp.ToTreat
 {
-    public readonly struct RunnerAction<TE1, TE2, TE3>
+    public readonly struct ActionToTreat<TE1, TE2, TE3, TE4>
         where TE1 : Exception
         where TE2 : Exception
         where TE3 : Exception
+        where TE4 : Exception
     {
         private Action Function { get; }
 
-        public RunnerAction(Action function)
+        public ActionToTreat(Action function)
         {
             Function = function;
         }
@@ -18,7 +19,7 @@ namespace PrancingPonySharp.Runner
         ///     Try to run the method or handle the exception.
         /// </summary>
         public void RunOrFailure(Action<TE1> caseFailure1, Action<TE2> caseFailure2, Action<TE3> caseFailure3,
-            Action<Exception> caseFailureDefault)
+            Action<TE4> caseFailure4, Action<Exception> caseFailureDefault)
         {
             try
             {
@@ -35,6 +36,10 @@ namespace PrancingPonySharp.Runner
             catch (TE3 exception)
             {
                 caseFailure3(exception);
+            }
+            catch (TE4 exception)
+            {
+                caseFailure4(exception);
             }
             catch (Exception exception)
             {

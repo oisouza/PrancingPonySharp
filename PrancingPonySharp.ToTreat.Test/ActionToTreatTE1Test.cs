@@ -1,10 +1,10 @@
 ﻿using System;
 using Xunit;
 
-namespace PrancingPonySharp.Runner.Test
+namespace PrancingPonySharp.ToTreat.Test
 {
     // ReSharper disable once InconsistentNaming
-    public class RunnerActionTE1Test
+    public class ActionToTreatTE1Test
     {
         [Fact]
         public void ShouldChangeTheActualToTomato()
@@ -16,9 +16,9 @@ namespace PrancingPonySharp.Runner.Test
                 actual = text;
             }
 
-            RunnerAction<InvalidCastException> ApplyChangeActualToText(string text)
+            ActionToTreat<InvalidCastException> ApplyChangeActualToText(string text)
             {
-                return new RunnerAction<InvalidCastException>(() => ChangeActualToText(text));
+                return new ActionToTreat<InvalidCastException>(() => ChangeActualToText(text));
             }
 
             ApplyChangeActualToText("tomato").RunOrFailure(
@@ -30,9 +30,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleException()
         {
-            RunnerAction<InvalidCastException> ThrowException()
+            ActionToTreat<InvalidCastException> ThrowException()
             {
-                return new RunnerAction<InvalidCastException>(() =>
+                return new ActionToTreat<InvalidCastException>(() =>
                     throw new Exception());
             }
 
@@ -44,9 +44,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleInvalidCastException()
         {
-            RunnerAction<InvalidCastException> ThrowInvalidCastException()
+            ActionToTreat<InvalidCastException> ThrowInvalidCastException()
             {
-                return new RunnerAction<InvalidCastException>(() =>
+                return new ActionToTreat<InvalidCastException>(() =>
                     throw new InvalidCastException());
             }
 

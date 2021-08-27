@@ -1,9 +1,9 @@
 ﻿using System;
 using Xunit;
 
-namespace PrancingPonySharp.Runner.Test
+namespace PrancingPonySharp.ToTreat.Test
 {
-    public class RunnerActionTest
+    public class ActionToTreatTest
     {
         [Fact]
         public void ShouldChangeTheActualToTomato()
@@ -15,9 +15,9 @@ namespace PrancingPonySharp.Runner.Test
                 actual = text;
             }
 
-            RunnerAction ApplyChangeActualToText(string text)
+            ActionToTreat ApplyChangeActualToText(string text)
             {
-                return new RunnerAction(() => ChangeActualToText(text));
+                return new ActionToTreat(() => ChangeActualToText(text));
             }
 
             ApplyChangeActualToText("tomato").RunOrFailure(exception => throw exception);
@@ -27,9 +27,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleException()
         {
-            RunnerAction ThrowException()
+            ActionToTreat ThrowException()
             {
-                return new RunnerAction(() =>
+                return new ActionToTreat(() =>
                     throw new Exception());
             }
 

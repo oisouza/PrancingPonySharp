@@ -1,9 +1,9 @@
 ﻿using System;
 using Xunit;
 
-namespace PrancingPonySharp.Runner.Test
+namespace PrancingPonySharp.ToTreat.Test
 {
-    public class RunnerFuncTest
+    public class FuncToTreatTest
     {
         [Fact]
         public void ShouldChangeTheActualToTomatoWithFuncInHandler()
@@ -15,9 +15,9 @@ namespace PrancingPonySharp.Runner.Test
                 return actual = text;
             }
 
-            RunnerFunc<string> ApplyChangeActualToText(string text)
+            FuncToTreat<string> ApplyChangeActualToText(string text)
             {
-                return new RunnerFunc<string>(() => ChangeActualToText(text));
+                return new FuncToTreat<string>(() => ChangeActualToText(text));
             }
 
             ApplyChangeActualToText("tomato").RunOrFailure(exception => throw exception);
@@ -27,9 +27,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldReturnTheActualConcatenatedWithTomatoWithFuncInHandler()
         {
-            RunnerFunc<string> ReturnTextWithTomato(string text)
+            FuncToTreat<string> ReturnTextWithTomato(string text)
             {
-                return new RunnerFunc<string>(() => text + "tomato");
+                return new FuncToTreat<string>(() => text + "tomato");
             }
 
             var actual = ReturnTextWithTomato("concatenated with ").RunOrFailure(exception => throw exception);
@@ -39,9 +39,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleExceptionWithFuncInHandler()
         {
-            RunnerFunc<string> ThrowException()
+            FuncToTreat<string> ThrowException()
             {
-                return new RunnerFunc<string>(() =>
+                return new FuncToTreat<string>(() =>
                     throw new Exception());
             }
 
@@ -59,9 +59,9 @@ namespace PrancingPonySharp.Runner.Test
                 return actual = text;
             }
 
-            RunnerFunc<string> ApplyChangeActualToText(string text)
+            FuncToTreat<string> ApplyChangeActualToText(string text)
             {
-                return new RunnerFunc<string>(() => ChangeActualToText(text));
+                return new FuncToTreat<string>(() => ChangeActualToText(text));
             }
 
             ApplyChangeActualToText("tomato").RunOrFailure(
@@ -72,9 +72,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleExceptionWithActionInHandler()
         {
-            RunnerFunc<string> ThrowException()
+            FuncToTreat<string> ThrowException()
             {
-                return new RunnerFunc<string>(() =>
+                return new FuncToTreat<string>(() =>
                     throw new Exception());
             }
 

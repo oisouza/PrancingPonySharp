@@ -1,10 +1,10 @@
 ﻿using System;
 using Xunit;
 
-namespace PrancingPonySharp.Runner.Test
+namespace PrancingPonySharp.ToTreat.Test
 {
     // ReSharper disable once InconsistentNaming
-    public class RunnerFuncTE3Test
+    public class FuncToTreatTE4Test
     {
         [Fact]
         public void ShouldChangeTheActualToTomatoWithFuncInHandler()
@@ -16,10 +16,10 @@ namespace PrancingPonySharp.Runner.Test
                 return actual = text;
             }
 
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>
                 ApplyChangeActualToText(string text)
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(
                     () => ChangeActualToText(text));
             }
 
@@ -27,6 +27,7 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 exception => throw exception);
             Assert.Equal("tomato", actual);
         }
@@ -34,15 +35,16 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldReturnTheActualConcatenatedWithTomatoWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ReturnTextWithTomato(string text)
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ReturnTextWithTomato(string text)
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() => text + "tomato");
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() => text + "tomato");
             }
 
             var actual = ReturnTextWithTomato("concatenated with ").RunOrFailure(
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 exception => throw exception);
             Assert.Equal("concatenated with tomato", actual);
         }
@@ -50,9 +52,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleExceptionWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new Exception());
             }
 
@@ -60,15 +62,16 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 exception => throw exception));
         }
 
         [Fact]
         public void ShouldHandleInvalidCastExceptionWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new InvalidCastException());
             }
 
@@ -76,15 +79,16 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 exception => throw exception));
         }
 
         [Fact]
         public void ShouldHandleApplicationExceptionWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new ApplicationException());
             }
 
@@ -92,15 +96,16 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 exception => throw exception));
         }
 
         [Fact]
         public void ShouldHandleAccessViolationExceptionWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new AccessViolationException());
             }
 
@@ -108,6 +113,24 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
+                exception => throw exception));
+        }
+
+        [Fact]
+        public void ShouldHandleArgumentNullExceptionWithFuncInHandler()
+        {
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
+            {
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
+                    throw new ArgumentNullException());
+            }
+
+            Assert.Throws<ArgumentNullException>(() => ThrowException().RunOrFailure(
+                invalidCastException => throw invalidCastException,
+                applicationException => throw applicationException,
+                accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 exception => throw exception));
         }
 
@@ -121,9 +144,9 @@ namespace PrancingPonySharp.Runner.Test
                 return actual = text;
             }
 
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ApplyChangeActualToText(string text)
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ApplyChangeActualToText(string text)
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(
                     () => ChangeActualToText(text));
             }
 
@@ -131,6 +154,7 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 new Action<Exception>(exception => throw exception));
             Assert.Equal("tomato", actual);
         }
@@ -138,9 +162,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleExceptionWithActionInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new Exception());
             }
 
@@ -148,15 +172,16 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 new Action<Exception>(exception => throw exception)));
         }
 
         [Fact]
         public void ShouldHandleInvalidCastExceptionWithActionInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new InvalidCastException());
             }
 
@@ -164,15 +189,16 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 new Action<Exception>(exception => throw exception)));
         }
 
         [Fact]
         public void ShouldHandleApplicationExceptionWithActionInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new ApplicationException());
             }
 
@@ -180,6 +206,7 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 new Action<Exception>(exception => throw exception)));
         }
 
@@ -187,9 +214,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleAccessViolationExceptionWithActionInHandler()
         {
-            RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException> ThrowException()
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException, ApplicationException, AccessViolationException>(() =>
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
                     throw new AccessViolationException());
             }
 
@@ -197,6 +224,24 @@ namespace PrancingPonySharp.Runner.Test
                 invalidCastException => throw invalidCastException,
                 applicationException => throw applicationException,
                 accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
+                new Action<Exception>(exception => throw exception)));
+        }
+
+        [Fact]
+        public void ShouldHandleArgumentNullExceptionWithActionInHandler()
+        {
+            FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException> ThrowException()
+            {
+                return new FuncToTreat<string, InvalidCastException, ApplicationException, AccessViolationException, ArgumentNullException>(() =>
+                    throw new ArgumentNullException());
+            }
+
+            Assert.Throws<ArgumentNullException>(() => ThrowException().RunOrFailure(
+                invalidCastException => throw invalidCastException,
+                applicationException => throw applicationException,
+                accessViolationException => throw accessViolationException,
+                argumentNullException => throw argumentNullException,
                 new Action<Exception>(exception => throw exception)));
         }
     }

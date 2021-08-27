@@ -1,10 +1,10 @@
 ﻿using System;
 using Xunit;
 
-namespace PrancingPonySharp.Runner.Test
+namespace PrancingPonySharp.ToTreat.Test
 {
     // ReSharper disable once InconsistentNaming
-    public class RunnerFuncTE1Test
+    public class FuncToTreatTE1Test
     {
         [Fact]
         public void ShouldChangeTheActualToTomatoWithFuncInHandler()
@@ -16,9 +16,9 @@ namespace PrancingPonySharp.Runner.Test
                 return actual = text;
             }
 
-            RunnerFunc<string, InvalidCastException> ApplyChangeActualToText(string text)
+            FuncToTreat<string, InvalidCastException> ApplyChangeActualToText(string text)
             {
-                return new RunnerFunc<string, InvalidCastException>(() => ChangeActualToText(text));
+                return new FuncToTreat<string, InvalidCastException>(() => ChangeActualToText(text));
             }
 
             ApplyChangeActualToText("tomato").RunOrFailure(
@@ -30,9 +30,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldReturnTheActualConcatenatedWithTomatoWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException> ReturnTextWithTomato(string text)
+            FuncToTreat<string, InvalidCastException> ReturnTextWithTomato(string text)
             {
-                return new RunnerFunc<string, InvalidCastException>(() => text + "tomato");
+                return new FuncToTreat<string, InvalidCastException>(() => text + "tomato");
             }
 
             var actual = ReturnTextWithTomato("concatenated with ").RunOrFailure(
@@ -44,9 +44,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleExceptionWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException> ThrowException()
+            FuncToTreat<string, InvalidCastException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException>(() =>
+                return new FuncToTreat<string, InvalidCastException>(() =>
                     throw new Exception());
             }
 
@@ -58,9 +58,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleInvalidCastExceptionWithFuncInHandler()
         {
-            RunnerFunc<string, InvalidCastException> ThrowException()
+            FuncToTreat<string, InvalidCastException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException>(() =>
+                return new FuncToTreat<string, InvalidCastException>(() =>
                     throw new InvalidCastException());
             }
 
@@ -79,9 +79,9 @@ namespace PrancingPonySharp.Runner.Test
                 return actual = text;
             }
 
-            RunnerFunc<string, InvalidCastException> ApplyChangeActualToText(string text)
+            FuncToTreat<string, InvalidCastException> ApplyChangeActualToText(string text)
             {
-                return new RunnerFunc<string, InvalidCastException>(() => ChangeActualToText(text));
+                return new FuncToTreat<string, InvalidCastException>(() => ChangeActualToText(text));
             }
 
             ApplyChangeActualToText("tomato").RunOrFailure(
@@ -93,9 +93,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleExceptionWithActionInHandler()
         {
-            RunnerFunc<string, InvalidCastException> ThrowException()
+            FuncToTreat<string, InvalidCastException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException>(() =>
+                return new FuncToTreat<string, InvalidCastException>(() =>
                     throw new Exception());
             }
 
@@ -107,9 +107,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleInvalidCastExceptionWithActionInHandler()
         {
-            RunnerFunc<string, InvalidCastException> ThrowException()
+            FuncToTreat<string, InvalidCastException> ThrowException()
             {
-                return new RunnerFunc<string, InvalidCastException>(() =>
+                return new FuncToTreat<string, InvalidCastException>(() =>
                     throw new InvalidCastException());
             }
 

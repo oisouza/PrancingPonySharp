@@ -1,10 +1,10 @@
 ﻿using System;
 using Xunit;
 
-namespace PrancingPonySharp.Runner.Test
+namespace PrancingPonySharp.ToTreat.Test
 {
     // ReSharper disable once InconsistentNaming
-    public class RunnerActionTE2Test
+    public class ActionToTreatTE2Test
     {
         [Fact]
         public void ShouldChangeTheActualToTomato()
@@ -16,9 +16,9 @@ namespace PrancingPonySharp.Runner.Test
                 actual = text;
             }
 
-            RunnerAction<InvalidCastException, ArithmeticException> ApplyChangeActualToText(string text)
+            ActionToTreat<InvalidCastException, ArithmeticException> ApplyChangeActualToText(string text)
             {
-                return new RunnerAction<InvalidCastException, ArithmeticException>(() => ChangeActualToText(text));
+                return new ActionToTreat<InvalidCastException, ArithmeticException>(() => ChangeActualToText(text));
             }
 
             ApplyChangeActualToText("tomato").RunOrFailure(
@@ -31,9 +31,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleException()
         {
-            RunnerAction<InvalidCastException, ArithmeticException> ThrowException()
+            ActionToTreat<InvalidCastException, ArithmeticException> ThrowException()
             {
-                return new RunnerAction<InvalidCastException, ArithmeticException>(() =>
+                return new ActionToTreat<InvalidCastException, ArithmeticException>(() =>
                     throw new Exception());
             }
 
@@ -46,9 +46,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleInvalidCastException()
         {
-            RunnerAction<InvalidCastException, ArithmeticException> ThrowInvalidCastException()
+            ActionToTreat<InvalidCastException, ArithmeticException> ThrowInvalidCastException()
             {
-                return new RunnerAction<InvalidCastException, ArithmeticException>(() =>
+                return new ActionToTreat<InvalidCastException, ArithmeticException>(() =>
                     throw new InvalidCastException());
             }
 
@@ -61,9 +61,9 @@ namespace PrancingPonySharp.Runner.Test
         [Fact]
         public void ShouldHandleArithmeticException()
         {
-            RunnerAction<InvalidCastException, ArithmeticException> ThrowInvalidCastException()
+            ActionToTreat<InvalidCastException, ArithmeticException> ThrowInvalidCastException()
             {
-                return new RunnerAction<InvalidCastException, ArithmeticException>(() =>
+                return new ActionToTreat<InvalidCastException, ArithmeticException>(() =>
                     throw new ArithmeticException());
             }
 

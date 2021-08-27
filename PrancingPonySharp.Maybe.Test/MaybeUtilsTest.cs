@@ -15,7 +15,7 @@ namespace PrancingPonySharp.Maybe.Test
             Assert.Equal(expected, actual);
         }
 
-        public static IEnumerable<object[]> TestDataToSeeIfYouAreWrappingAModelTest()
+        public static IEnumerable<object[]> ShouldTestDataToSeeIfYouAreWrappingAModelTest()
         {
             return new List<object[]>
             {
@@ -27,7 +27,7 @@ namespace PrancingPonySharp.Maybe.Test
         }
 
         [Theory]
-        [MemberData(nameof(TestDataToSeeIfYouAreWrappingAModelTest))]
+        [MemberData(nameof(ShouldTestDataToSeeIfYouAreWrappingAModelTest))]
         public static void ShouldWrapATestModelPassed(ModelTest testModel)
         {
             Maybe<ModelTest> expected = testModel;

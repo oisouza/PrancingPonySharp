@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace PrancingPonySharp.Runner
+namespace PrancingPonySharp.ToTreat
 {
-    public readonly struct RunnerAction<TE1, TE2>
+    public readonly struct ActionToTreat<TE1, TE2>
         where TE1 : Exception
         where TE2 : Exception
     {
         private Action Function { get; }
 
-        public RunnerAction(Action function)
+        public ActionToTreat(Action function)
         {
             Function = function;
         }

@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PrancingPonySharp.Runner\PrancingPonySharp.Runner.csproj" />
+    <ProjectReference Include="..\PrancingPonySharp.ToTreat\PrancingPonySharp.ToTreat.csproj" />
   </ItemGroup>
 
 </Project>
