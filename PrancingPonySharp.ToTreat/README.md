@@ -40,11 +40,11 @@ The best place to be you use to learn about ToTreat is the [test folder of the T
 
 ### But here is a standard example.
 
-        > PokemonService
+        >>> PokemonService.cs
         public FuncToTreat<Pokemon> GetPokemon(int id) =>
            return new FuncToTreat<Pokemon>(() => Repository.GetPokemon(id));
 
-        > PokemonController
+        >>> PokemonController.cs
         public Pokemon GetPokemon(int id) =>
             PokemonService.GetPokemon(id).RunOrFailure(exception => throw exception);
 
