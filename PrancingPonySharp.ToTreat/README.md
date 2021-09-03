@@ -32,7 +32,7 @@ _or_
 
 (T is the type of comeback)
 
-> **By default you are always required to treat the default exception. The TE1234... is optional.**
+> **By default you are always required to treat the default exception. The TE, TE1, TE2... is optional.**
 
 The best place to be you use to learn about ToTreat is the [test folder of the totreat](https://github.com/eduardosilva218/PrancingPonySharp/tree/main/PrancingPonySharp.ToTreat.Test)
 
