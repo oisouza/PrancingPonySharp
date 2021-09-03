@@ -37,3 +37,26 @@ _or_
 
 The best place to be you use to learn about ToTreat is the [test folder of the ToTreat](https://github.com/eduardosilva218/PrancingPonySharp/tree/main/PrancingPonySharp.ToTreat.Test)
 
+        > PokemonService
+        public FuncToTreat<Pokemon> GetPokemon(int id) =>
+           return new FuncToTreat<Pokemon>(() => GetPokemonOfDatabase(id));
+
+        > PokemonController
+        public void GetPokemon()
+        {
+            var pokemon = PokemonService.GetPokemon(2).RunOrFailure(exception => throw exception);
+        }
+or
+
+        > PokemonService
+        public ActionToTreat SavePokemon(Pokemon pokemon) =>
+           return new ActionToTreat(() => SavePokemonInDatabase(pokemon));
+
+        > PokemonController
+        public void SavePokemon()
+        {
+            var pokemonToSave = new Pokemon { Name = "Pikachu" }
+            PokemonService.SavePokemon(pokemonToSave).RunOrFailure(exception => throw exception);
+        }
+        
+And you can pass four more exceptions that will force the programmer to deal with.
