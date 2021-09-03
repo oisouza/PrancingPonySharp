@@ -6,29 +6,29 @@ The idea of structure is to force you to deal with the exceptions of your functi
 
 Then, when using you will have to treat the exceptions according to what was passed.
 
-`ActionToTreat`
+`readonly struct ActionToTreat`
 
-`ActionToTreat<TE1>`
+`readonly struct ActionToTreat<TE1>`
 
-`ActionToTreat<TE1, TE2>`
+`readonly struct ActionToTreat<TE1, TE2>`
 
-`ActionToTreat<TE1, TE2, TE3>`
+`readonly struct ActionToTreat<TE1, TE2, TE3>`
 
-`ActionToTreat<TE1, TE2, TE3, TE4>`
+`readonly struct ActionToTreat<TE1, TE2, TE3, TE4>`
 
 (TE is the type of exception)
 
 _or_ 
 
-`FuncToTreat<T>`
+`readonly struct FuncToTreat<T>`
 
-`FuncToTrea<T, TE1>`
+`readonly struct FuncToTrea<T, TE1>`
 
-`FuncToTrea<T, TE1, TE2>`
+`readonly struct FuncToTrea<T, TE1, TE2>`
 
-`FuncToTrea<T, TE1, TE2, TE3>`
+`readonly struct FuncToTrea<T, TE1, TE2, TE3>`
 
-`FuncToTrea<T, TE1, TE2, TE3, TE4>` 
+`readonly struct FuncToTrea<T, TE1, TE2, TE3, TE4>` 
 
 (T is the type of comeback)
 
