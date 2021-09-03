@@ -31,6 +31,7 @@ Then, when using you will have to treat the exceptions according to what was pas
 `readonly struct FuncToTrea<T, TE1, TE2, TE3, TE4>` 
 
 * T is the type of comeback
+* TE is the type of exception
  
  
 > **By default you are always required to treat the default exception.**
