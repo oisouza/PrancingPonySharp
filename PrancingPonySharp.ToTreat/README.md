@@ -32,3 +32,5 @@ _or_
 
 (T is the type of comeback)
 
+By default you are always required to treat the default exception.
+
