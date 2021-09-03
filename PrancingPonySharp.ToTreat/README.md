@@ -39,7 +39,7 @@ The best place to be you use to learn about ToTreat is the [test folder of the T
 
         > PokemonService
         public FuncToTreat<Pokemon> GetPokemon(int id) =>
-           return new FuncToTreat<Pokemon>(() => GetPokemonOfDatabase(id));
+           return new FuncToTreat<Pokemon>(() => Repository.GetPokemon(id));
 
         > PokemonController
         public Pokemon GetPokemon(int id) =>
@@ -49,7 +49,7 @@ or
 
         > PokemonService
         public ActionToTreat SavePokemon(Pokemon pokemon) =>
-           return new ActionToTreat(() => SavePokemonInDatabase(pokemon));
+           return new ActionToTreat(() => Repository.SavePokemon(pokemon));
 
         > PokemonController
         public void SavePokemon()
