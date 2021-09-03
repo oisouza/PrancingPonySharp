@@ -42,10 +42,9 @@ The best place to be you use to learn about ToTreat is the [test folder of the T
            return new FuncToTreat<Pokemon>(() => GetPokemonOfDatabase(id));
 
         > PokemonController
-        public void GetPokemon()
-        {
-            var pokemon = PokemonService.GetPokemon(2).RunOrFailure(exception => throw exception);
-        }
+        public Pokemon GetPokemon(int id) =>
+            PokemonService.GetPokemon(id).RunOrFailure(exception => throw exception);
+
 or
 
         > PokemonService
