@@ -5,3 +5,30 @@ The idea of structure is to force you to deal with the exceptions of your functi
 **To solve this, simply return a Func or an Action to the data structure it will be encapsulated.**
 
 Then, when using you will have to treat the exceptions according to what was passed.
+
+`ActionToTreat`
+
+`ActionToTreat<TE1>`
+
+`ActionToTreat<TE1, TE2>`
+
+`ActionToTreat<TE1, TE2, TE3>`
+
+`ActionToTreat<TE1, TE2, TE3, TE4>`
+
+(TE is the type of exception)
+
+_or_ 
+
+`FuncToTreat<T>`
+
+`FuncToTrea<T, TE1>`
+
+`FuncToTrea<T, TE1, TE2>`
+
+`FuncToTrea<T, TE1, TE2, TE3>`
+
+`FuncToTrea<T, TE1, TE2, TE3, TE4>` 
+
+(T is the type of comeback)
+
