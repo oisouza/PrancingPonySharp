@@ -54,7 +54,7 @@ or
         > PokemonController
         public void SavePokemon()
         {
-            var pokemonToSave = new Pokemon { Name = "Pikachu" }
+            var pokemonToSave = new Pokemon { Name = "Pikachu" };
             PokemonService.SavePokemon(pokemonToSave).RunOrFailure(exception => throw exception);
         }
         
