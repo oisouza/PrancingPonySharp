@@ -16,7 +16,7 @@ Then, when using you will have to treat the exceptions according to what was pas
 
 `readonly struct ActionToTreat<TE1, TE2, TE3, TE4>`
 
-(TE is the type of exception)
+* TE is the type of exception
 
 _or_ 
 
@@ -30,7 +30,7 @@ _or_
 
 `readonly struct FuncToTrea<T, TE1, TE2, TE3, TE4>` 
 
-(T is the type of comeback)
+* T is the type of comeback
 
 > **By default you are always required to treat the default exception.**
 
