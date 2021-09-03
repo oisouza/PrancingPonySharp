@@ -50,11 +50,11 @@ The best place to be you use to learn about ToTreat is the [test folder of the T
 
 ***or***
 
-        > PokemonService
+        >>> PokemonService.cs
         public ActionToTreat SavePokemon(Pokemon pokemon) =>
            return new ActionToTreat(() => Repository.SavePokemon(pokemon));
 
-        > PokemonController
+        >>> PokemonController.cs
         public void SavePokemon()
         {
             var pokemonToSave = new Pokemon { Name = "Pikachu" };
