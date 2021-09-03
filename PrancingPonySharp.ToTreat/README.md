@@ -18,7 +18,7 @@ Then, when using you will have to treat the exceptions according to what was pas
 
 * TE is the type of exception
 
-***or 
+***or*** 
 
 `readonly struct FuncToTreat<T>`
 
@@ -47,7 +47,7 @@ The best place to be you use to learn about ToTreat is the [test folder of the T
         public Pokemon GetPokemon(int id) =>
             PokemonService.GetPokemon(id).RunOrFailure(exception => throw exception);
 
-***or
+***or***
 
         > PokemonService
         public ActionToTreat SavePokemon(Pokemon pokemon) =>
