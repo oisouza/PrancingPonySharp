@@ -37,6 +37,8 @@ _or_
 
 The best place to be you use to learn about ToTreat is the [test folder of the ToTreat](https://github.com/eduardosilva218/PrancingPonySharp/tree/main/PrancingPonySharp.ToTreat.Test)
 
+### But here is a standard example.
+
         > PokemonService
         public FuncToTreat<Pokemon> GetPokemon(int id) =>
            return new FuncToTreat<Pokemon>(() => Repository.GetPokemon(id));
