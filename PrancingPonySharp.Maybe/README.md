@@ -1,4 +1,4 @@
-# About the implementation of maybe in this project 
+# About the implementation of Maybe in this project 
 
 The implementation of [maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe) in this project aims to encapsulate values to prevent null references from happening.
 
