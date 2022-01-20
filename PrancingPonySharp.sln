@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Maybe", ".\PrancingPonySharp.Maybe\PrancingPonySharp.Maybe.csproj", "{FD158C36-F433-4F95-9E40-65A6A957932C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Maybe", "PrancingPonySharp.Maybe\PrancingPonySharp.Maybe.csproj", "{FD158C36-F433-4F95-9E40-65A6A957932C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Maybe.Test", ".\PrancingPonySharp.Maybe.Test\PrancingPonySharp.Maybe.Test.csproj", "{6D536133-150E-425F-B3AF-AB7CC17A53A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.Maybe.Test", "PrancingPonySharp.Maybe.Test\PrancingPonySharp.Maybe.Test.csproj", "{6D536133-150E-425F-B3AF-AB7CC17A53A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.ToTreat", ".\PrancingPonySharp.ToTreat\PrancingPonySharp.ToTreat.csproj", "{1BBDC9E8-70D9-47B2-B306-366732B4858D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.ToTreat", "PrancingPonySharp.ToTreat\PrancingPonySharp.ToTreat.csproj", "{1BBDC9E8-70D9-47B2-B306-366732B4858D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.ToTreat.Test", ".\PrancingPonySharp.ToTreat.Test\PrancingPonySharp.ToTreat.Test.csproj", "{D9975A57-2DC6-4A72-A4B7-5FFC15791E0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.ToTreat.Test", "PrancingPonySharp.ToTreat.Test\PrancingPonySharp.ToTreat.Test.csproj", "{D9975A57-2DC6-4A72-A4B7-5FFC15791E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.QueueExtensions", "QueueExtensions\PrancingPonySharp.QueueExtensions.csproj", "{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.QueueExtensions.Test", "PrancingPonySharp.QueueExtensions.Test\PrancingPonySharp.QueueExtensions.Test.csproj", "{0F25E465-4F9F-467B-A69E-793FCCA69A6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{D9975A57-2DC6-4A72-A4B7-5FFC15791E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9975A57-2DC6-4A72-A4B7-5FFC15791E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9975A57-2DC6-4A72-A4B7-5FFC15791E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F25E465-4F9F-467B-A69E-793FCCA69A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F25E465-4F9F-467B-A69E-793FCCA69A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F25E465-4F9F-467B-A69E-793FCCA69A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F25E465-4F9F-467B-A69E-793FCCA69A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
