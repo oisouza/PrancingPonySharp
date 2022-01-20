@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.ToTreat",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.ToTreat.Test", "PrancingPonySharp.ToTreat.Test\PrancingPonySharp.ToTreat.Test.csproj", "{D9975A57-2DC6-4A72-A4B7-5FFC15791E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.QueueExtensions", "QueueExtensions\PrancingPonySharp.QueueExtensions.csproj", "{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.QueueExtensions", "PrancingPonySharp.QueueExtensions\PrancingPonySharp.QueueExtensions.csproj", "{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.QueueExtensions.Test", "PrancingPonySharp.QueueExtensions.Test\PrancingPonySharp.QueueExtensions.Test.csproj", "{0F25E465-4F9F-467B-A69E-793FCCA69A6A}"
 EndProject

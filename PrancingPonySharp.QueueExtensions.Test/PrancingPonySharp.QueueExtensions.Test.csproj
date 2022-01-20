@@ -20,7 +20,7 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\QueueExtensions\PrancingPonySharp.QueueExtensions.csproj" />
+		<ProjectReference Include="..\PrancingPonySharp.QueueExtensions\PrancingPonySharp.QueueExtensions.csproj" />
 	</ItemGroup>
 
 </Project>
