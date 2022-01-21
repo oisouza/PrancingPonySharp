@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace PrancingPonySharp.QueueExtensions
 {
@@ -10,16 +12,19 @@ namespace PrancingPonySharp.QueueExtensions
                 queue.Enqueue(value);
         }
 
-        public static IEnumerable<T> Dequeue<T>(this Queue<T> queue, uint quantity)
+        public static IEnumerable<T> Dequeue<T>(this Queue<T> queue, int quantity)
         {
-            var list = new List<T>((int) quantity);
-            if (quantity is 0)
-                return list;
-            if (queue.Count < quantity)
-                quantity = (uint) queue.Count;
+            ValidateQuantityToAddToCollection(quantity, queue);
+            var dequeuedList = new List<T>(quantity);
             for (var index = 0; index < quantity; index++)
-                list.Add(queue.Dequeue());
-            return list;
+                dequeuedList.Add(queue.Dequeue());
+            return dequeuedList;
+        }
+
+        private static void ValidateQuantityToAddToCollection(int quantity, ICollection collection)
+        {
+            if (collection.Count < quantity || quantity < 0)
+                throw new IndexOutOfRangeException($"The length is {collection.Count} but the quantity is {quantity}.");
         }
     }
 }

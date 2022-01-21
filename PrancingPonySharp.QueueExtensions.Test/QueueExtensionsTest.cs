@@ -55,30 +55,29 @@ namespace PrancingPonySharp.QueueExtensions.Test
         }
 
         [Fact]
-        public void ShouldRemoveEverythingFromTheQueueEvenIfItAsksForMoreElements()
+        public void ShouldThrowIndexOutOfRangeExceptionWithCorrectMessageIfItAsksForMoreElements()
         {
-            var expected = new Queue<int>(0);
             var actual = new Queue<int>(new[]
             {
                 1, 2, 3, 4
             });
-            actual.Dequeue(200000);
-            Assert.Equal(expected, actual);
+            const int quantity = 200000;
+            var exception = Assert.Throws<IndexOutOfRangeException>(
+                () => actual.Dequeue(quantity));
+            Assert.Equal($"The length is {actual.Count} but the quantity is {quantity}.", exception.Message);
         }
 
         [Fact]
-        public void ShouldReturnEverythingFromTheQueueEvenIfItAsksForMoreElements()
+        public void ShouldThrowIndexOutOfRangeExceptionWithCorrectMessageIfPassNegativeNumber()
         {
-            var expected = new[]
-            {
-                1, 2, 3, 4
-            };
-            var queue = new Queue<int>(new[]
+            var actual = new Queue<int>(new[]
             {
                 1, 2, 3, 4
             });
-            var actual = queue.Dequeue(200000);
-            Assert.Equal(expected, actual);
+            const int quantity = -23;
+            var exception = Assert.Throws<IndexOutOfRangeException>(
+                () => actual.Dequeue(quantity));
+            Assert.Equal($"The length is {actual.Count} but the quantity is {quantity}.", exception.Message);
         }
 
         [Fact]
