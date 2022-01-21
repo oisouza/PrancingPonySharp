@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace PrancingPonySharp.QueueExtensions
@@ -7,7 +6,7 @@ namespace PrancingPonySharp.QueueExtensions
     public static class QueueExtensions
     {
         /// <summary>
-        ///     Adds an enumerable to the end of the Queue<T>.
+        ///     Adds each value of an enumerable to the end of the Queue<T>.
         /// </summary>
         public static void EnqueueEnumerable<T>(this Queue<T> queue, IEnumerable<T> enumerable)
         {
@@ -16,21 +15,20 @@ namespace PrancingPonySharp.QueueExtensions
         }
 
         /// <summary>
-        ///     Removes and returns the quantity of objects at the beginning of the Queue<T>.
+        ///     Dequeues a given amount of values at the beginning of the Queue<T> and returns them as a enumerable.
         /// </summary>
         public static IEnumerable<T> Dequeue<T>(this Queue<T> queue, int quantity)
         {
-            ValidateQuantityToAddToCollection(quantity, queue);
+            if (queue.Count < quantity || quantity < 0)
+            {
+                var exceptionMessage =
+                    $"Attempted to dequeue an invalid amount of values: The queue's length is {queue.Count} but the amount expected to dequeue is {quantity}.";
+                throw new IndexOutOfRangeException(exceptionMessage);
+            }
             var dequeuedList = new List<T>(quantity);
             for (var index = 0; index < quantity; index++)
                 dequeuedList.Add(queue.Dequeue());
             return dequeuedList;
-        }
-
-        private static void ValidateQuantityToAddToCollection(int quantity, ICollection collection)
-        {
-            if (collection.Count < quantity || quantity < 0)
-                throw new IndexOutOfRangeException($"The length is {collection.Count} but the quantity is {quantity}.");
         }
     }
 }

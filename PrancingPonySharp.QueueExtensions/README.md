@@ -5,7 +5,7 @@ Some methods that improve the use of `Queue<T>` in .NET.
 # Extension methods
 * ### EnqueueEnumerable
 
-Adds an enumerable to the end of the Queue<T>.
+Adds each value of an enumerable to the end of the Queue<T>.
 
 `static void EnqueueEnumerable<T>(this Queue<T> queue, IEnumerable<T> enumerable)`
 
@@ -27,7 +27,7 @@ _Example_
 ```
 * ### Dequeue
 
-Removes and returns the quantity of objects at the beginning of the Queue<T>.
+Dequeues a given amount of values at the beginning of the Queue<T> and returns them as a enumerable.
 
 `static IEnumerable<T> Dequeue<T>(this Queue<T> queue, int quantity)`
 
