@@ -1,14 +1,16 @@
 # PrancingPonySharp
  Library with algorithms and data structures useful for clean project developers.
  
- ### Data Structures
+ ### Wine house
  * Do you want to end all null references in your project? [Maybe](PrancingPonySharp.Maybe/README.md) we can help you.
  * Don't trust the programmer [ToTreat](PrancingPonySharp.ToTreat/README.md) exceptions, force it.
+ * Are you suffering from a lack of [extension methods](PrancingPonySharp.QueueExtensions/README.md) for `Queues<T>` in .NET?
 
 ### To install
 The project is divided into several packages in nuget: 
 * [Maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe).
 * [ToTreat](https://www.nuget.org/packages/PrancingPonySharp.ToTreat).
+* [QueueExtensions](https://www.nuget.org/packages/PrancingPonySharp.QueueExtensions).
 
 ![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
