@@ -77,7 +77,7 @@ namespace PrancingPonySharp.QueueExtensions.Test
             const int quantity = -23;
             var exception = Assert.Throws<IndexOutOfRangeException>(
                 () => actual.Dequeue(quantity));
-            Assert.Equal($"The length is {actual.Count} but the quantity is {quantity}.", exception.Message);
+            Assert.Equal($"Attempted to dequeue an invalid amount of values: The queue's length is {actual.Count} but the amount expected to dequeue is {quantity}.", exception.Message);
         }
 
         [Fact]
