@@ -6,12 +6,18 @@ namespace PrancingPonySharp.QueueExtensions
 {
     public static class QueueExtensions
     {
+        /// <summary>
+        ///     Adds an enumerable to the end of the Queue<T>.
+        /// </summary>
         public static void EnqueueEnumerable<T>(this Queue<T> queue, IEnumerable<T> enumerable)
         {
             foreach (var value in enumerable)
                 queue.Enqueue(value);
         }
 
+        /// <summary>
+        ///     Removes and returns the quantity of objects at the beginning of the Queue<T>.
+        /// </summary>
         public static IEnumerable<T> Dequeue<T>(this Queue<T> queue, int quantity)
         {
             ValidateQuantityToAddToCollection(quantity, queue);
