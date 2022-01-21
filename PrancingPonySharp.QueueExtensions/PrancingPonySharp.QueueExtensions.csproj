@@ -13,7 +13,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Images\pony-icon.png" />
+    <None Remove="Images\pony-icon.png" />
+    <None Remove="Images\pony-icon.png" />
+    <None Include="Images\pony-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
 
 </Project>
