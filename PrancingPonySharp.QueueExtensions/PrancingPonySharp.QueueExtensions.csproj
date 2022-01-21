@@ -2,6 +2,21 @@
 
   <PropertyGroup>
 	  <TargetFrameworks>netstandard2.1;net45</TargetFrameworks>
+	  <Description>Some methods that improve the use of Queue&lt;T&gt; in .NET.</Description>
+	  <PackageProjectUrl>https://github.com/eduardosilva218/PrancingPonySharp</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
+	  <PackageReleaseNotes>* Enqueue enumerable
+* Dequeue enumerable.</PackageReleaseNotes>
+	  <RepositoryType>public</RepositoryType>
+	  <PackageIcon>pony-icon.png</PackageIcon>
+	  <PackageIconUrl />
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Images\pony-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
