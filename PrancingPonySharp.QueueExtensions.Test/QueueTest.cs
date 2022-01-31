@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 using Xunit;
 
 namespace PrancingPonySharp.QueueExtensions.Test
 {
-    public class QueueExtensionsTest
+    public class QueueTest
     {
         [Fact]
         public void ShouldQueueEnumerable()
@@ -35,7 +34,7 @@ namespace PrancingPonySharp.QueueExtensions.Test
             {
                 1, 2, 3, 4
             });
-            actual.Dequeue(2);
+            actual.DequeueEnumerable(2);
             Assert.Equal(expected, actual);
         }
 
@@ -50,7 +49,7 @@ namespace PrancingPonySharp.QueueExtensions.Test
             {
                 1, 2, 3, 4
             });
-            var actual = queue.Dequeue(2);
+            var actual = queue.DequeueEnumerable(2);
             Assert.Equal(expected, actual);
         }
 
@@ -63,7 +62,7 @@ namespace PrancingPonySharp.QueueExtensions.Test
             });
             const int quantity = 200000;
             var exception = Assert.Throws<IndexOutOfRangeException>(
-                () => actual.Dequeue(quantity));
+                () => actual.DequeueEnumerable(quantity));
             Assert.Equal($"Attempted to dequeue an invalid amount of values: The queue's length is {actual.Count} but the amount expected to dequeue is {quantity}.", exception.Message);
         }
 
@@ -76,7 +75,7 @@ namespace PrancingPonySharp.QueueExtensions.Test
             });
             const int quantity = -23;
             var exception = Assert.Throws<IndexOutOfRangeException>(
-                () => actual.Dequeue(quantity));
+                () => actual.DequeueEnumerable(quantity));
             Assert.Equal($"Attempted to dequeue an invalid amount of values: The queue's length is {actual.Count} but the amount expected to dequeue is {quantity}.", exception.Message);
         }
 
@@ -91,7 +90,7 @@ namespace PrancingPonySharp.QueueExtensions.Test
             {
                 1, 2, 3, 4
             });
-            actual.Dequeue(0);
+            actual.DequeueEnumerable(0);
             Assert.Equal(expected, actual);
         }
 
@@ -103,7 +102,7 @@ namespace PrancingPonySharp.QueueExtensions.Test
             {
                 1, 2, 3, 4
             });
-            var actual = queue.Dequeue(0);
+            var actual = queue.DequeueEnumerable(0);
             Assert.Equal(expected, actual);
         }
     }

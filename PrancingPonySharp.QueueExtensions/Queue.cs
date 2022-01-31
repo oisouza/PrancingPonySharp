@@ -3,31 +3,35 @@ using System.Collections.Generic;
 
 namespace PrancingPonySharp.QueueExtensions
 {
-    public static class QueueExtensions
+    public class Queue<T> : System.Collections.Generic.Queue<T>
     {
+        public Queue(IEnumerable<T> enumerable) : base(enumerable)
+        {
+        }
+
         /// <summary>
         ///     Adds each value of an enumerable to the end of the Queue<T>.
         /// </summary>
-        public static void EnqueueEnumerable<T>(this Queue<T> queue, IEnumerable<T> enumerable)
+        public void EnqueueEnumerable(IEnumerable<T> enumerable)
         {
             foreach (var value in enumerable)
-                queue.Enqueue(value);
+                Enqueue(value);
         }
 
         /// <summary>
         ///     Dequeues a given amount of values at the beginning of the Queue<T> and returns them as a enumerable.
         /// </summary>
-        public static IEnumerable<T> Dequeue<T>(this Queue<T> queue, int quantity)
+        public IEnumerable<T> DequeueEnumerable(int quantity)
         {
-            if (queue.Count < quantity || quantity < 0)
+            if (Count < quantity || quantity < 0)
             {
                 var exceptionMessage =
-                    $"Attempted to dequeue an invalid amount of values: The queue's length is {queue.Count} but the amount expected to dequeue is {quantity}.";
+                    $"Attempted to dequeue an invalid amount of values: The queue's length is {Count} but the amount expected to dequeue is {quantity}.";
                 throw new IndexOutOfRangeException(exceptionMessage);
             }
             var dequeuedList = new List<T>(quantity);
             for (var index = 0; index < quantity; index++)
-                dequeuedList.Add(queue.Dequeue());
+                dequeuedList.Add(Dequeue());
             return dequeuedList;
         }
     }

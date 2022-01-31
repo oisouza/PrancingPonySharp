@@ -1,13 +1,13 @@
-# Extensions to Queue in .NET
+# Class Queue<T>
 
-Some methods that improve the use of `Queue<T>` in .NET.
+A better `Queue<T>` class.
 
-# Extension methods
+# New methods
 * ### EnqueueEnumerable
 
 Adds each value of an enumerable to the end of the Queue<T>.
 
-`static void EnqueueEnumerable<T>(this Queue<T> queue, IEnumerable<T> enumerable)`
+`void EnqueueEnumerable(IEnumerable<T> enumerable)`
 
 _Example_
  ```
@@ -25,11 +25,11 @@ _Example_
  });
  Assert.Equal(expected, actual);
 ```
-* ### Dequeue
+* ### DequeueEnumerable
 
 Dequeues a given amount of values at the beginning of the Queue<T> and returns them as a enumerable.
 
-`static IEnumerable<T> Dequeue<T>(this Queue<T> queue, int quantity)`
+`IEnumerable<T> DequeueEnumerable(int quantity)`
 
 _Example_
  ```
@@ -41,9 +41,13 @@ _Example_
  {
    1, 2, 3, 4
  });
- actual.Dequeue(2);
+ actual.DequeueEnumerable(2);
  Assert.Equal(expected, actual);
 ```
+
+# Class LimitedQueue<T>
+
+One queue with limit with the same methods as this library's common Queue.
 
 # Questions?
 

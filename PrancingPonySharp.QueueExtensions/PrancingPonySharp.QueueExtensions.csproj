@@ -2,17 +2,21 @@
 
   <PropertyGroup>
 	  <TargetFrameworks>netstandard2.1;net45</TargetFrameworks>
-	  <Description>Some methods that improve the use of Queue&lt;T&gt; in .NET.</Description>
+	  <Description>Better classes to work with queues.</Description>
 	  <PackageProjectUrl>https://github.com/eduardosilva218/PrancingPonySharp</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
-	  <PackageReleaseNotes>* Enqueue enumerable
-* Dequeue enumerable.</PackageReleaseNotes>
+	  <PackageReleaseNotes>Better Queue&lt;T&gt;
+* Enqueue enumerable
+* Dequeue enumerable.
+
+LimitedQueue&lt;T&gt;
+* Queue with limit.</PackageReleaseNotes>
 	  <RepositoryType>public</RepositoryType>
 	  <PackageIcon>pony-icon.png</PackageIcon>
 	  <PackageIconUrl />
-	  <AssemblyVersion>1.0.1.0</AssemblyVersion>
-	  <FileVersion>1.0.1.0</FileVersion>
-	  <Version>1.0.1</Version>
+	  <AssemblyVersion>1.0.2.0</AssemblyVersion>
+	  <FileVersion>1.0.2.0</FileVersion>
+	  <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
