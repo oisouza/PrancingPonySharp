@@ -1,4 +1,4 @@
-# Class Queue<T>
+# Class `Queue<T>`
 
 A better `Queue<T>` class.
 
@@ -45,7 +45,7 @@ _Example_
  Assert.Equal(expected, actual);
 ```
 
-# Class LimitedQueue<T>
+# Class `LimitedQueue<T>`
 
 One queue with limit with the same methods as this library's common Queue.
 
