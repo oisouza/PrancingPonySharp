@@ -27,7 +27,7 @@ namespace PrancingPonySharp.QueueExtensions
         }
 
         /// <summary>
-        ///     Adds an object to the end of the Queue. if you have remaining space.
+        ///     Adds an object to the end of the Queue<T> if you have remaining space.
         /// </summary>
         public new void Enqueue(T item)
         {
