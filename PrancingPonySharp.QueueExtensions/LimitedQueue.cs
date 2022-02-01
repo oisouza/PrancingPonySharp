@@ -6,12 +6,16 @@ namespace PrancingPonySharp.QueueExtensions
 {
     public class LimitedQueue<T> : Queue<T>
     {
-        public LimitedQueue(IEnumerable<T> enumerable, uint limit) : base(enumerable)
-        {
-            Limit = (int) limit;
-        }
+        public LimitedQueue(uint limit) =>
+            Setup(limit);
 
-        public int Limit { get; }
+        public LimitedQueue(IEnumerable<T> enumerable, uint limit) : base(enumerable) => 
+            Setup(limit);
+
+        private void Setup(uint limit) => 
+            Limit = (int)limit;
+
+        public int Limit { get; private set; }
 
         public bool Full => Count == Limit;
 

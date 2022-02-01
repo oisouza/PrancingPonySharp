@@ -14,9 +14,9 @@ LimitedQueue&lt;T&gt;
 	  <RepositoryType>public</RepositoryType>
 	  <PackageIcon>pony-icon.png</PackageIcon>
 	  <PackageIconUrl />
-	  <AssemblyVersion>1.0.2.0</AssemblyVersion>
-	  <FileVersion>1.0.2.0</FileVersion>
-	  <Version>1.0.2</Version>
+	  <AssemblyVersion>1.0.3.0</AssemblyVersion>
+	  <FileVersion>1.0.3.0</FileVersion>
+	  <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

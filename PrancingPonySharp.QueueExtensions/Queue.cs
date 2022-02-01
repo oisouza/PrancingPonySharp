@@ -5,6 +5,10 @@ namespace PrancingPonySharp.QueueExtensions
 {
     public class Queue<T> : System.Collections.Generic.Queue<T>
     {
+        public Queue()
+        {
+        }
+
         public Queue(IEnumerable<T> enumerable) : base(enumerable)
         {
         }
