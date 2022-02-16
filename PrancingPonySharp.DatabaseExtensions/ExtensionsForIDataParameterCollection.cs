@@ -6,6 +6,9 @@ namespace PrancingPonySharp.DatabaseExtensions
 {
     public static class ExtensionsForIDataParameterCollection
     {
+        /// <summary>
+        ///     Adds a dictionary with parameters to the IDbCommand.
+        /// </summary>
         public static void AddParameters(this IDbCommand command, 
             IDictionary<string, object> parameters)
         {
