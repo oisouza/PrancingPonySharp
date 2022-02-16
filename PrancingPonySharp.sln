@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.ToTreat",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.ToTreat.Test", "PrancingPonySharp.ToTreat.Test\PrancingPonySharp.ToTreat.Test.csproj", "{D9975A57-2DC6-4A72-A4B7-5FFC15791E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.QueueExtensions", "PrancingPonySharp.QueueExtensions\PrancingPonySharp.QueueExtensions.csproj", "{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.QueueExtensions", "PrancingPonySharp.QueueExtensions\PrancingPonySharp.QueueExtensions.csproj", "{9B93A427-DFC4-4C51-8F74-C8680D51C4C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.QueueExtensions.Test", "PrancingPonySharp.QueueExtensions.Test\PrancingPonySharp.QueueExtensions.Test.csproj", "{0F25E465-4F9F-467B-A69E-793FCCA69A6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.QueueExtensions.Test", "PrancingPonySharp.QueueExtensions.Test\PrancingPonySharp.QueueExtensions.Test.csproj", "{0F25E465-4F9F-467B-A69E-793FCCA69A6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrancingPonySharp.DatabaseExtensions", "PrancingPonySharp.DatabaseExtensions\PrancingPonySharp.DatabaseExtensions.csproj", "{A1F990FD-9A57-4A5D-808F-0B2487FA0821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrancingPonySharp.DatabaseExtensions.Test", "PrancingPonySharp.DatabaseExtensions.Test\PrancingPonySharp.DatabaseExtensions.Test.csproj", "{A4694D8C-8EE8-4E9E-A8B2-2AE50BF146A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{0F25E465-4F9F-467B-A69E-793FCCA69A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F25E465-4F9F-467B-A69E-793FCCA69A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F25E465-4F9F-467B-A69E-793FCCA69A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1F990FD-9A57-4A5D-808F-0B2487FA0821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F990FD-9A57-4A5D-808F-0B2487FA0821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F990FD-9A57-4A5D-808F-0B2487FA0821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F990FD-9A57-4A5D-808F-0B2487FA0821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4694D8C-8EE8-4E9E-A8B2-2AE50BF146A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4694D8C-8EE8-4E9E-A8B2-2AE50BF146A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4694D8C-8EE8-4E9E-A8B2-2AE50BF146A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4694D8C-8EE8-4E9E-A8B2-2AE50BF146A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
