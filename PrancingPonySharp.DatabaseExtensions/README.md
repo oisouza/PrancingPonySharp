@@ -5,7 +5,7 @@ Helpers for working with databases.
 # Extensions methods of IDbCommand
 * ### AddParameters
 
-Adds a IEnumerable<IDbDataParameter> to the IDbCommand.
+Adds a `IEnumerable<IDbDataParameter>` to the `IDbCommand`.
 
 `static void AddParameters(this IDbCommand command, IEnumerable<IDbDataParameter> parameters)`
 
@@ -22,7 +22,7 @@ new Dictionary<string, object>
 # Extensions methods of IDictionary<string, object>
 * ### ConvertToParameters
 
-Convert a IDictionary<string, object> to the IEnumerable<IDbDataParameter>.
+Convert a `IDictionary<string, object>` to the `IEnumerable<IDbDataParameter>`.
 
 `static IEnumerable<IDbDataParameter> ConvertToParameters(this IDictionary<string, object> parameterDictionary, IDbCommand command)`
 
