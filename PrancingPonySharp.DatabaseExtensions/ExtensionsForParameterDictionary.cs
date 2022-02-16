@@ -7,6 +7,9 @@ namespace PrancingPonySharp.DatabaseExtensions
 {
     public static class ExtensionsForParameterDictionary
     {
+        /// <summary>
+        ///     Convert a IDictionary<string, object> to the IEnumerable<IDbDataParameter>.
+        /// </summary>
         public static IEnumerable<IDbDataParameter> ConvertToParameters(
             this IDictionary<string, object> parameterDictionary, IDbCommand command)
         {

@@ -8,7 +8,9 @@
 	  <PackageIcon>pony-icon.png</PackageIcon>
 	  <PackageIconUrl />
 	  <Description>Helpers for working with databases.</Description>
-	  <PackageReleaseNotes>AddParameters in IDbCommand</PackageReleaseNotes>
+	  <PackageReleaseNotes>AddParameters in IDbCommand
+ConvertToParameters in IDictionary&lt;string, object&gt;</PackageReleaseNotes>
+	  <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

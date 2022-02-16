@@ -6,6 +6,9 @@ namespace PrancingPonySharp.DatabaseExtensions
 {
     public static class ExtensionsForIDbCommand
     {
+        /// <summary>
+        ///     Adds a IEnumerable<IDbDataParameter> to the IDbCommand.
+        /// </summary>
         public static void AddParameters(this IDbCommand command, IEnumerable<IDbDataParameter> parameters)
         {
             if (parameters is null)
