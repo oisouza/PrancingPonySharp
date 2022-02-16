@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>netstandard2.1;net45</TargetFrameworks>
+	  <RepositoryUrl>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryUrl>
+	  <RepositoryType>https://github.com/eduardosilva218/PrancingPonySharp</RepositoryType>
+	  <PackageTags></PackageTags>
+	  <PackageIcon>pony-icon.png</PackageIcon>
+	  <PackageIconUrl />
+	  <Description>Helpers for working with databases.</Description>
+	  <PackageReleaseNotes>AddParameters in IDbCommand
+ConvertToParameters in IDictionary&lt;string, object&gt;</PackageReleaseNotes>
+	  <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Images\pony-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
