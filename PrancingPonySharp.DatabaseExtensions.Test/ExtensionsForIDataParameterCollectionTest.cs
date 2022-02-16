@@ -7,7 +7,7 @@ using Xunit;
 
 namespace PrancingPonySharp.DatabaseExtensions.Test
 {
-    public class ExtensionsForIDataParameterCollection
+    public class ExtensionsForIDataParameterCollectionTest
     {
         [Fact]
         public void ShouldBeAddParametersInIDbCommand()
