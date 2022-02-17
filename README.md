@@ -5,12 +5,14 @@
  * Do you want to end all null references in your project? [Maybe](PrancingPonySharp.Maybe/README.md) we can help you.
  * Don't trust the programmer [ToTreat](PrancingPonySharp.ToTreat/README.md) exceptions, force it.
  * Are you suffering from a lack of [extension methods](PrancingPonySharp.QueueExtensions/README.md) for `Queues<T>` in .NET?
+ * [Helpers](PrancingPonySharp.DatabaseExtensions/README.md) for working with databases.
 
 ### To install
 The project is divided into several packages in nuget: 
 * [Maybe](https://www.nuget.org/packages/PrancingPonySharp.Maybe).
 * [ToTreat](https://www.nuget.org/packages/PrancingPonySharp.ToTreat).
 * [QueueExtensions](https://www.nuget.org/packages/PrancingPonySharp.QueueExtensions).
+* [DatabaseExtensions](https://www.nuget.org/packages/PrancingPonySharp.DatabaseExtensions).
 
 ![pony](PrancingPonySharp.Maybe/Images/pony-icon.png)
 
